@@ -6,7 +6,21 @@
 
 4. 본인 이름 폴더에 index.html, index.css, index.js는 폴더를 나타내려고 임의로 넣은것임 => 삭제하고 진행하면됨!!
 
-5. commit 메시지 아래와 같이 작성하면 좋음
+- 본인 폴더안에서만 파일 만들고 코드 짜면됨
+- 남의 폴더 들어가서 코드짜기 ㄴㄴ
+
+4. 팀 깃허브 repository
+
+- https://github.com/xowls0315/Torriden
+
+5. 파트별 영역
+
+- 황태진: 메인, About, 헤더, 푸터
+- 손영선: Shop, Coummnunity
+- 권유나: Brand Work, Event
+
+6. commit 메시지 아래와 같이 작성하면 좋음
+
 - Feat: 기능(새로운 기능)
 - Fix: 코드 수정, 문제 해결
 - Refactor: 리팩토링
@@ -16,10 +30,18 @@
 - Design: 페이지 퍼블리싱 및 css 수정 등 UI 변경ㄴ\
 - Help: 도움 요청
 
-6. 목요일까지 완료
+<<<<<<< HEAD 6. 목요일까지 완료
+
 - 수요일까지 완료 후, 목요일 오전에 최종 점검
 
-7. 변수 이름은 스네이크케이스(SnakeCase로 진행)
+7. # 변수 이름은 스네이크케이스(SnakeCase로 진행)
+8. 목요일까지 완료
+
+- 수요일까지 완료 후, 목요일 오전에 최종 점검
+
+8. 변수 이름은 스네이크케이스(SnakeCase로 진행)
+   > > > > > > > 8e7891b6f6e70567dcb99c61391a0e697cfe2544
+
 - ex) class: about
 - ex) class: about_contents
 - ex) class: about_contents_info
