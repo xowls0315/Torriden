@@ -16,4 +16,10 @@
 - Design: 페이지 퍼블리싱 및 css 수정 등 UI 변경ㄴ\
 - Help: 도움 요청
 
+6. 목요일까지 완료
+- 수요일까지 완료 후, 목요일 오전에 최종 점검
 
+7. 변수 이름은 스네이크케이스(SnakeCase로 진행)
+- ex) class: about
+- ex) class: about_contents
+- ex) class: about_contents_info
