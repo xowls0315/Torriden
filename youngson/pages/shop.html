@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Torriden</title>
+
+    <link rel="stylesheet" href="../../reset.css" />
+    <link rel="stylesheet" href="../css/shop.css" />
+    <script src="../javascript/shop.js" defer></script>
+  </head>
+  <body>
+    <!-- Shop page 전체 컨테이너 -->
+    <section class="shop_containor">
+      <!-- Shop 헤더 -->
+      <div class="shop_header_wrap">
+        <div class="shop_header">ALL</div>
+        <!-- Shop 헤더 인포 -->
+        <div class="shop_header_info">
+          <span>총 <strong>103</strong>개의 상품이 있습니다.</span>
+          <div class="sort_selector">인기순</div>
+        </div>
+      </div>
+      <!-- Shop 컨텐츠 / 상품 -->
+      <div class="shop_content_wrap">
+        <!-- Shop 컨텐츠 카드 하나만 먼저 레이아웃 만들기 -->
+        <div class="shop_content_card">
+          <div class="content_img_wrap">
+            <img src="../ys_img/product1.jpg" alt="" />
+            <button class="heart_btn">
+              <img src="../ys_img/icon_heartbtn.svg" alt="" />
+            </button>
+          </div>
+          <div class="content_info_wrap">
+            <div class="item_name">
+              [3종세트] 다이브인 저분자 히알루론산 세럼 50ml + 토너 300ml + 크림
+              80ml+(쇼핑백 증정)
+            </div>
+
+            <!-- Js 로 
+             forEach 비포가격, 세일 퍼센트 숫자로 받고
+             애프터에 넣어주기 -->
+            <div class="item_price_wrap">
+              <div class="item_price_sale"></div>
+              <div class="item_price_after"></div>
+              <div class="item_price_before"></div>
+            </div>
+          </div>
+          <div class="content_cart"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
