@@ -1,0 +1,47 @@
+.brandwork {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  color: #2a3e48;
+}
+.brandwork > .brandwork__title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 38px;
+
+  margin-top: 80px;
+}
+.brandwork > .brandwork__contents {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  padding: 0px 10px;
+  margin-top: 60px;
+
+  gap: 50px 25px;
+}
+.brandwork > .brandwork__contents > img {
+  width: 450px;
+  height: 450px;
+
+  object-fit: cover;
+}
+.brandwork > .brandwork__contents > .contents {
+  display: flex;
+  flex-direction: column;
+}
+.brandwork > .brandwork__contents > .contents > .contents-title {
+  margin-top: 14px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.brandwork > .brandwork__contents > .contents > .contents-sub {
+  margin-top: 7px;
+  font-size: 16px;
+  font-weight: 400;
+
+  margin-bottom: 160px;
+}
