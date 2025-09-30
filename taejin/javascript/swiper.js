@@ -20,7 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 3, // 한 화면 3장
         slidesPerGroup: 1, // ← 한 칸씩 이동
         spaceBetween: 20,
+
+        // 루프 관련
         loop: true,
+        loopPreventsSliding: false, // ⬅️ 끝단에서 계속 드래그해도 막지 않음
+        loopAdditionalSlides: 6, // ⬅️ 복제 슬라이드 여유 (슬라이드 적을 때 유용)
+        watchSlidesProgress: true, // ⬅️ 루프+프로그레스바 안정화에 도움
         speed: 600,
 
         // 반응형
@@ -30,19 +35,32 @@ document.addEventListener('DOMContentLoaded', () => {
             1024: { slidesPerView: 3, slidesPerGroup: 1, spaceBetween: 20 },
         },
 
-        // 루프 시 자연스러운 복제 슬라이드 수(슬라이드가 적을 때 대비)
-        loopAdditionalSlides: 6,
-
         navigation: {
-            nextEl: '.products-swiper .swiper-button-next',
-            prevEl: '.products-swiper .swiper-button-prev',
+            nextEl: '.products-next', // ⬅️ 래퍼 바깥의 버튼
+            prevEl: '.products-prev',
         },
         pagination: {
-            el: '.products-swiper .swiper-pagination',
+            el: '.products-pagination', // ⬅️ 래퍼 바깥의 프로그레스바
             type: 'progressbar',
         },
-
-        // 스와이프/드래그 포인터
-        grabCursor: true,
     });
 });
+
+// 공통: 슬라이드 세트 교체 함수
+function setSlides(htmlArray) {
+    // 1) 루프 해제 (복제 슬라이드 제거)
+    productsSwiper.loopDestroy();
+
+    // 2) 기존 슬라이드 전부 제거
+    productsSwiper.removeAllSlides();
+
+    // 3) 새 슬라이드 추가
+    productsSwiper.appendSlide(htmlArray);
+
+    // 4) 루프 다시 생성 + 업데이트
+    productsSwiper.loopCreate();
+    productsSwiper.update();
+
+    // 5) 첫 슬라이드로 점프(애니메이션 없이)
+    productsSwiper.slideToLoop(0, 0);
+}
