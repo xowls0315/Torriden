@@ -1,0 +1,104 @@
+/* news 전체 영역 */
+.news {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f5f5f5;
+  color: #2a3e48;
+}
+
+/* 제목 */
+.news__title {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 38px;
+  margin: 80px 0px 20px;
+}
+
+/* 테이블 */
+.news__table {
+  width: 60vw; /* 뷰포트 가로의 80% */
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* 헤더 */
+.news__table_header {
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  font-size: 11px;
+}
+
+.news__table_header > .news__table_num,
+.news__table_header > .news__table_title,
+.news__table_header > .news__table_date,
+.news__table_header > .news__table_writer,
+.news__table_header > .news__table_view {
+  border-bottom: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* 데이터 행 */
+
+.news__table_row > .news__table_num,
+.news__table_row > .news__table_title,
+.news__table_row > .news__table_date,
+.news__table_row > .news__table_writer,
+.news__table_row > .news__table_view {
+  border-bottom: 1px solid #ddd;
+  padding: 12px;
+  color: #2a3e48;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+
+  padding: 20px 12px;
+}
+
+/* 열별 스타일 */
+.news__table_num {
+  width: 60px;
+  text-align: center;
+}
+
+.news__table_title {
+  text-align: left;
+  margin-left: 25px;
+}
+
+.news__table_date {
+  width: 120px;
+  text-align: center;
+}
+
+.news__table_writer {
+  width: 100px;
+  text-align: center;
+}
+
+.news__table_view {
+  width: 60px;
+  text-align: center;
+}
+
+/* 페이지 버튼 */
+.news__pageButtons > .news__pageButton {
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  border: 1px solid #d7d5d5;
+  margin: 80px auto;
+
+  color: #909090;
+
+  cursor: pointer;
+}
+
+.news__pageButtons > .news__pageButton-third {
+  color: #2a3e48;
+  border-bottom: 2px solid #2a3e48;
+}
