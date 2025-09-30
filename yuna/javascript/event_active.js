@@ -2,19 +2,19 @@ const event__section = document.querySelector(".event__section");
 
 const data = [
   {
-    src: "../img/event_active_1.jpg",
+    src: "../img/event_active/event_active_1.jpg",
     span: `한가위 추석 선물 기획전🎁<br>UP TO 51%`,
   },
   {
-    src: "../img/event_active_2.jpg",
+    src: "../img/event_active/event_active_2.jpg",
     span: `끈적임 zero, 수분감 max<br> 다이브인 포맨~40% 할인...`,
   },
   {
-    src: "../img/event_active_3.jpg",
+    src: "../img/event_active/event_active_3.jpg",
     span: `토리든 카카오톡 플러스친구 혜택`,
   },
   {
-    src: "../img/event_active_4.jpg",
+    src: "../img/event_active/event_active_4.jpg",
     span: `토리든<br>신규회원 혜택`,
   },
 ];
