@@ -66,11 +66,5 @@ const event__pageButton_third = document.querySelector(
 );
 
 event__pageButton_first.addEventListener("click", () => {
-  location.href = "http://127.0.0.1:5500/yuna/pages/event_ended.html";
-});
-event__pageButton_second.addEventListener("click", () => {
-  location.href = "http://127.0.0.1:5500/yuna/pages/event_ended2.html";
-});
-event__pageButton_third.addEventListener("click", () => {
-  location.href = "http://127.0.0.1:5500/yuna/pages/event_ended3.html";
+  location.href = "http://127.0.0.1:5500/yuna/pages/event_active.html";
 });

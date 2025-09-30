@@ -66,10 +66,7 @@
   word-break: keep-all;
   margin: 15px 0px;
 }
-.event > .event__pageButtons {
-  display: flex;
-  flex-direction: row;
-}
+
 .event > .event__pageButtons > .event__pageButton {
   padding: 0;
   width: 34px;

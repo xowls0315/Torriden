@@ -55,10 +55,7 @@
 
   margin-bottom: 80px;
 }
-.brandwork > .brandwork__pageButton {
-  display: flex;
-  flex-direction: row;
-}
+
 .brandwork > .brandwork__pageButton > .brandwork__pageButton-first {
   padding: 0;
   width: 34px;
@@ -67,6 +64,8 @@
   border: 1px solid #d7d5d5;
 
   color: #909090;
+
+  cursor: pointer;
 }
 .brandwork > .brandwork__pageButton > .brandwork__pageButton-second {
   padding: 0;
@@ -79,4 +78,5 @@
   border-bottom: 2px solid#2a3e48;
 
   margin-bottom: 80px;
+  cursor: pointer;
 }
