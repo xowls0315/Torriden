@@ -20,8 +20,7 @@ header > nav {
     align-items: center;
 }
 header > nav > img {
-    width: 160px;
-    height: 30px;
+    width: 130px;
     object-fit: cover;
     cursor: pointer;
 }
@@ -31,6 +30,7 @@ header > nav > img {
 }
 .nav_menu > li {
     color: #475659;
+    font-size: 14px;
     cursor: pointer;
 }
 .nav_icon {
