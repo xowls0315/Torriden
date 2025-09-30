@@ -113,3 +113,26 @@ data.forEach((v) => {
   // tbody에 추가
   news__table_tbody.appendChild(tr);
 });
+
+// 버튼 클릭시 페이지 이동
+const news__pageButton_first = document.querySelector(
+  ".news__pageButton-first"
+);
+const news__pageButton_second = document.querySelector(
+  ".news__pageButton-second"
+);
+const news__pageButton_third = document.querySelector(
+  ".news__pageButton-third"
+);
+
+news__pageButton_first.addEventListener("click", () => {
+  location.href = "http://127.0.0.1:5500/yuna/pages/news.html";
+});
+
+news__pageButton_second.addEventListener("click", () => {
+  location.href = "http://127.0.0.1:5500/yuna/pages/news2.html";
+});
+
+news__pageButton_third.addEventListener("click", () => {
+  location.href = "http://127.0.0.1:5500/yuna/pages/news3.html";
+});
