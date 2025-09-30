@@ -273,32 +273,31 @@ main {
     padding: 5px 10px;
     cursor: pointer;
 }
-.mainpage_contents3_bests {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+/* ✅ 제품 스와이퍼 컨테이너 */
+.products-swiper {
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
 
-    border: 1px solid red;
+    border: 1px solid peru;
 }
-.mainpage_contents3_bests > article {
-    width: 25%;
+/* 트랙/슬라이드 */
+.products-swiper .swiper-wrapper {
+    align-items: stretch;
+}
+.products-swiper .swiper-slide {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-
-    border: 1px solid green;
+    gap: 20px;
 }
-.mainpage_contents3_bests > article > div {
+.product-thumb {
     position: relative;
     display: inline-block;
 }
-.mainpage_contents3_bests > article > div > img {
-    display: block;
-    width: 300px;
+.product-thumb img {
+    width: 100%;
     object-fit: cover;
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 }
@@ -325,24 +324,51 @@ main {
 .mainpage_contents3_bests-like-btn[aria-pressed='true'] i {
     color: #e11d48;
 } /* 눌림 색상 */
-
-.mainpage_contents3_bests > article > span {
+.products-swiper .swiper-slide > span {
     font-size: 14px;
     color: #475861;
 }
-.mainpage_contents3_bests > article > div {
+.product-price {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
 }
-.mainpage_contents3_bests > article > div > p {
+.product-price > p {
     display: flex;
     align-items: center;
     gap: 15px;
     font-size: 14px;
     font-weight: bold;
 }
-.mainpage_contents3_bests > article > div > i {
+.product-price > i {
     font-size: 18px;
     cursor: pointer;
+}
+/* ✅ 페이지네이션: 하단 중앙 프로그레스바 */
+.products-swiper .swiper-pagination {
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%);
+    width: 20%;
+    height: 2px;
+    pointer-events: none;
+    z-index: 5;
+}
+.products-swiper .swiper-pagination-progressbar {
+    background: rgba(0, 0, 0, 0.15);
+}
+.products-swiper .swiper-pagination-progressbar-fill {
+    background: #111;
+    transform-origin: left;
+}
+/* 네비게이션 버튼 */
+.products-swiper .swiper-button-prev,
+.products-swiper .swiper-button-next {
+    color: #222;
+    width: auto;
+    height: auto;
+    padding: 0 16px;
 }

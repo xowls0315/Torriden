@@ -45,14 +45,19 @@
         <!-- Shop 헤더 인포 -->
         <div class="shop_header_info">
           <span>총 <strong>103</strong>개의 상품이 있습니다.</span>
-          <div class="shop_sort_selector">인기순</div>
+
+          <select class="shop_sort_selector">
+            <option>인기순</option>
+            <option>신상품순</option>
+            <option>판매량순</option>
+            <option>낮은가격</option>
+            <option>높은가격</option>
+          </select>
         </div>
       </div>
-      <!-- Shop 컨텐츠 / 상품
-      반복되는 레이아웃 미리 짜놓고
-      Js로 뿌려주기 
-      -->
+      <!-- Shop 아이템카드배포 -->
       <div class="shop_item_wrap" id="shop_item_wrap"></div>
+      <!-- Shop 하단 페이지선택 핸들러 -->
       <div class="shop_pagehandler">
         <ul>
           <li class="selected"><span>1</span></li>

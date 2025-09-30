@@ -3,7 +3,7 @@
 // item_sale: "",
 // item_price: "",
 
-const shopData = [
+const shopData1 = [
   {
     item_src:
       "https://torridtr9977.cdn-nhncommerce.com/data/goods/21/12/51//134/134_magnify_061.jpg",
@@ -96,7 +96,7 @@ const shopData = [
 document.addEventListener("DOMContentLoaded", () => {
   const shopItemWrap = document.getElementById("shop_item_wrap");
 
-  shopData.forEach((item) => {
+  shopData1.forEach((item) => {
     const card = document.createElement("div");
     card.className = "shop_item_card";
 
