@@ -1,11 +1,15 @@
 /* Shop page 전체 컨테이너 */
+body {
+  background-color: #fafafa;
+}
 .shop_containor {
   max-width: 1400px;
   margin: 0 auto;
   padding: 80px 0 120px;
 }
 
-/* Shop Header All Text */
+/* Shop Header
+=======================================*/
 .shop_header_wrap > .shop_header {
   margin-bottom: 30px;
   font-size: 40px;
@@ -26,7 +30,7 @@
 .shop_header_wrap > .shop_header_info > span > strong {
   font-weight: 700;
 }
-.shop_header_wrap > .shop_header_info > .sort_selector {
+.shop_header_wrap > .shop_header_info > .shop_sort_selector {
   display: flex;
   align-items: center;
   width: 120px;
@@ -40,8 +44,78 @@
     17px center;
 }
 
-/*  */
-.shop_content_wrap {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+/* Shop Item
+=======================================*/
+.shop_item_wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px 25px;
+}
+.shop_item_card {
+  width: calc(33.3333% - 16.8px);
+}
+/* Shop Item img */
+.shop_item_card > .shop_item_img_wrap {
+  position: relative;
+  cursor: pointer;
+}
+.shop_item_card > .shop_item_img_wrap > img {
+  width: 100%;
+  overflow: hidden;
+}
+.shop_item_card > .shop_item_img_wrap > .shop_heart_btn {
+  position: absolute;
+  bottom: 18px;
+  right: 20px;
+}
+/* Shop Item Info*/
+.shop_item_info_wrap {
+  padding-top: 15px;
+  margin: 0 6px;
+}
+.shop_item_info_wrap > .shop_item_name {
+  padding: 5px 0 0 0;
+  font-size: 18px;
+  color: #2a3e48;
+  font-weight: 400;
+  line-height: 24px;
+  cursor: pointer;
+}
+/* Shop Item Price */
+.shop_item_price_wrap {
+  display: flex;
+  padding-top: 40px;
+  font-size: 18px;
+}
+.shop_item_price_wrap > .shop_item_price_sale {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2a3e48;
+  margin-right: 10px;
+}
+.shop_item_price_wrap > .shop_item_price_after {
+  font-size: 18px;
+  margin-right: 10px;
+  font-weight: 600;
+}
+.shop_item_price_wrap > .shop_item_price_before {
+  color: #d0d0d0;
+  font-size: 15px;
+  line-height: 18px;
+  text-decoration: line-through;
+  vertical-align: middle;
+}
+/* Shop Item Cart */
+.shop_item_cart_wrap {
+  padding: 12px 20px;
+  background: #f5f5f5;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.shop_item_cart_wrap > span {
+  font-size: 12px;
 }
