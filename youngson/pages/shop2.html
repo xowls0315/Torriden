@@ -1,13 +1,51 @@
-<div class="shop_sort_selector">
-  <select name="sort" id="goods_sort">
-    <option value="" id="sort1" name="sort" selected="selected">인기순</option>
-    <option value="date" id="sort6" name="sort">신상품순</option>
-    <option value="sellcnt" id="sort2" name="sort">판매량순</option>
-    <option value="price_asc" id="sort3" name="sort">낮은가격</option>
-    <option value="price_dsc" id="sort4" name="sort">높은가격</option>
-    <!-- <option value="review" id="sort5" name="sort">상품평순</option> -->
-  </select>
-  <!-- //choice_num_view -->
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Torriden</title>
 
-<!-- <div class="shop_sort_selector">인기순</div> -->
+    <link rel="stylesheet" href="../../reset.css" />
+
+    <link rel="stylesheet" href="../css/shop.css" />
+    <link rel="stylesheet" href="../css/shop_header.css" />
+    <link rel="stylesheet" href="../css/shop_item.css" />
+    <link rel="stylesheet" href="../css/shop_pagehandler.css" />
+
+    <script src="../javascript/data.js" defer></script>
+    <script type="module" src="../javascript/shop2.js" defer></script>
+  </head>
+  <body>
+    <section class="shop_containor">
+      <div class="shop_header_wrap">
+        <div class="shop_header">ALL</div>
+        <div class="shop_header_info">
+          <span>총 <strong>103</strong>개의 상품이 있습니다.</span>
+          <select class="shop_sort_selector">
+            <option>인기순</option>
+            <option>신상품순</option>
+            <option>판매량순</option>
+            <option>낮은가격</option>
+            <option>높은가격</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="shop_item_wrap" id="shop_item_wrap"></div>
+
+      <div class="shop_pagehandler">
+        <ul>
+          <li><span>1</span></li>
+          <li class="selected"><span>2</span></li>
+          <li><span>3</span></li>
+          <li><span>4</span></li>
+          <li><span>5</span></li>
+          <li><span>6</span></li>
+          <li><span>7</span></li>
+          <li><span>8</span></li>
+          <li><span>9</span></li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>
