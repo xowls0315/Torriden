@@ -3,7 +3,346 @@ body {
 }
 main {
     width: 100%;
+    max-width: 95%;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding-top: var(--header-height); /* margin 대신 padding */
+}
+/* data-motion이 붙은 요소의 '직계 자식'을 기본 숨김 상태로 */
+[data-motion] > * {
+    opacity: 0;
+    transform: translateY(50px);
+}
+/* 프리셋별 초기 상태 */
+[data-motion='fade-up'] > * {
+    transform: translateY(50px);
+}
+[data-motion='fade-left'] > * {
+    transform: translateX(50px);
+}
+[data-motion='fade-right'] > * {
+    transform: translateX(-50px);
+}
+[data-motion='fade-down'] > * {
+    transform: translateY(-50px);
+}
+@media (prefers-reduced-motion: reduce) {
+    [data-motion] > * {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
+    }
+}
+.mainpage_contents1 {
+    width: 100%;
     height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+}
+.mainpage_contents1 > article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 10px;
+    padding: 40px 20px;
+    overflow: hidden;
+}
+.mainpage_contents1 > article::before {
+    content: '';
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* 배경마다 다른 이미지 설정 */
+}
+.mainpage_contents1-1 {
+    grid-area: 1 / 1 / 3 / 3;
+}
+.mainpage_contents1-1::before {
+    background-image: url('https://torridtr9977.cdn-nhncommerce.com/data/skin/front/moment_C/img/banner/12b84707e9856a5ecadb4a83f0b30637_94795.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+}
+.mainpage_contents1-2 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+.mainpage_contents1-2::before {
+    background-image: url('https://torridtr9977.cdn-nhncommerce.com/data/skin/front/moment_C/img/banner/0cf3bee08111ba13df06ebc4e6a00de9_34295.png');
+    background-position: 50% 50%;
+    background-size: cover;
+    -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+}
+.mainpage_contents1-3 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+.mainpage_contents1-3::before {
+    background-image: url('https://torridtr9977.cdn-nhncommerce.com/data/skin/front/moment_C/img/banner/0cf3bee08111ba13df06ebc4e6a00de9_36260.png');
+    background-position: 50% 50%;
+    background-size: cover;
+    -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+}
+.mainpage_contents1-4 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+.mainpage_contents1-4::before {
+    background-image: url('https://torridtr9977.cdn-nhncommerce.com/data/skin/front/moment_C/img/banner/0cf3bee08111ba13df06ebc4e6a00de9_96717.png');
+    background-position: 50% 50%;
+    background-size: cover;
+    -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+}
+.mainpage_contents1-5 {
+    grid-area: 2 / 4 / 3 / 5;
+}
+.mainpage_contents1-5::before {
+    background-image: url('https://torridtr9977.cdn-nhncommerce.com/data/skin/front/moment_C/img/banner/5cb0e619b9958e56e818c36639a1f79e_10762.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+}
+/* 텍스트는 relative, z-index로 배경 위에 올리기 */
+.mainpage_contents1 > article > h6,
+.mainpage_contents1 > article > span {
+    position: relative;
+    z-index: 1;
+}
+.mainpage_contents1-1 > span,
+.mainpage_contents1-2 > span,
+.mainpage_contents1-3 > span,
+.mainpage_contents1-4 > span,
+.mainpage_contents1-5 > span {
+    font-size: 12px;
+}
+
+.mainpage_contents2 {
+    width: 100%;
+    height: 80vh;
+    margin-top: 30px;
+    position: relative;
+}
+.mainpage_contents2 .swiper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.mainpage_contents2 .swiper-slide {
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 필요에 따라 조정 */
+    align-items: center;
+    color: #111;
+}
+.mainpage_contents2-1_text,
+.mainpage_contents2-2_text,
+.mainpage_contents2-3_text,
+.mainpage_contents2-4_text,
+.mainpage_contents2-5_text,
+.mainpage_contents2-6_text {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.mainpage_contents2-1_text > h3,
+.mainpage_contents2-2_text > h3,
+.mainpage_contents2-3_text > h3,
+.mainpage_contents2-4_text > h3,
+.mainpage_contents2-5_text > h3,
+.mainpage_contents2-6_text > h3 {
+    font-size: 30px;
+    font-weight: bold;
+}
+.mainpage_contents2-1_text > span,
+.mainpage_contents2-2_text > span,
+.mainpage_contents2-3_text > span,
+.mainpage_contents2-4_text > span,
+.mainpage_contents2-5_text > span,
+.mainpage_contents2-6_text > span {
+    margin-top: 30px;
+}
+.mainpage_contents2 .swiper-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.mainpage_contents2-1 {
+    background-image: url('https://torridtr9977.cdn-nhncommerce.com/data/skin/front/moment_C/img/banner/511adb57818f6dcd9c7df01b79e59618_41917.jpg');
+}
+.mainpage_contents2-2 {
+    background-image: url('https://torridtr9977.cdn-nhncommerce.com/data/skin/front/moment_C/img/banner/4d2c4a96190ff729f22d67ac50b56dff_16829.jpg');
+}
+.mainpage_contents2-3 {
+    background-image: url('https://torridtr9977.cdn-nhncommerce.com/data/skin/front/moment_C/img/banner/11896752cbe428be0b41c3f3d9824d48_86291.jpg');
+}
+.mainpage_contents2-4 {
+    background-image: url('https://torridtr9977.cdn-nhncommerce.com/data/skin/front/moment_C/img/banner/409465777be73e2659acd4c89152aad5_44475.jpg');
+}
+.mainpage_contents2-5 {
+    background-image: url('https://torridtr9977.cdn-nhncommerce.com/data/skin/front/moment_C/img/banner/3e09314bc35d9e9b03e9f417e6aa394e_83810.jpg');
+}
+.mainpage_contents2-6 {
+    background-image: url('https://torridtr9977.cdn-nhncommerce.com/data/skin/front/moment_C/img/banner/b5e4c8173bea082eca3f5f9aa65ff611_33218.jpg');
+}
+/* 하단 중앙 게이지 */
+.mainpage_contents2 .swiper-pagination {
+    position: absolute;
+    top: auto; /* ← 기본값 무효화 (핵심) */
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+    width: 15%; /* 원하는 길이 (예: 40%) */
+    height: 2px; /* 두께 */
+    z-index: 10;
+    pointer-events: none; /* 클릭 방해 제거(선택) */
+}
+/* 트랙/필 색상 */
+.mainpage_contents2 .swiper-pagination-progressbar {
+    background: rgba(0, 0, 0, 0.15);
+}
+.mainpage_contents2 .swiper-pagination-progressbar-fill {
+    background: #111;
+    transform-origin: left;
+}
+/* 네비게이션 버튼(원형 버튼 느낌) */
+.mainpage_contents2 .swiper-button-prev,
+.mainpage_contents2 .swiper-button-next {
+    width: fit-content;
+    height: fit-content;
+    color: #222;
+    padding: 0px 30px;
+}
+
+.mainpage_contents3 {
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 100px 0px;
+}
+.mainpage_contents3 > h3 {
+    font-size: 30px;
+    font-weight: bold;
+}
+.mainpage_contents3_btns {
+    display: flex;
+    gap: 20px;
+}
+.mainpage_contents3_btns > button {
+    background-color: transparent;
+    color: #2a3e4e;
+    border: none;
+    font-size: 16px;
+    border-bottom: 1px solid #2a3e4e;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.mainpage_contents3_bests {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 
     border: 1px solid red;
+}
+.mainpage_contents3_bests > article {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px solid green;
+}
+.mainpage_contents3_bests > article > div {
+    position: relative;
+    display: inline-block;
+}
+.mainpage_contents3_bests > article > div > img {
+    display: block;
+    width: 300px;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+.mainpage_contents3_bests-like-btn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.mainpage_contents3_bests-like-btn i {
+    font-size: 20px;
+    color: #475861;
+    line-height: 1;
+}
+.mainpage_contents3_bests-like-btn[aria-pressed='true'] i {
+    color: #e11d48;
+} /* 눌림 색상 */
+
+.mainpage_contents3_bests > article > span {
+    font-size: 14px;
+    color: #475861;
+}
+.mainpage_contents3_bests > article > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.mainpage_contents3_bests > article > div > p {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.mainpage_contents3_bests > article > div > i {
+    font-size: 18px;
+    cursor: pointer;
 }

@@ -6,6 +6,7 @@ header {
     height: var(--header-height);
     z-index: 999;
     position: fixed;
+    background-color: white;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     transition: all 0.5s;
     display: flex;
