@@ -1,0 +1,35 @@
+/* Shop Header
+=======================================*/
+.shop_header_wrap > .shop_header {
+  margin-bottom: 30px;
+  font-size: 40px;
+  line-height: 38px;
+  font-weight: 600;
+  color: #2a3e48;
+  text-align: center;
+}
+.shop_header_wrap > .shop_header_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+.shop_header_wrap > .shop_header_info > span {
+  font-size: 17px;
+}
+.shop_header_wrap > .shop_header_info > span > strong {
+  font-weight: 700;
+}
+.shop_header_wrap > .shop_header_info > .shop_sort_selector {
+  display: flex;
+  align-items: center;
+  width: 120px;
+  height: 45px;
+  border: 1px solid #e0e0e0;
+  text-indent: 17px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #909090;
+  background: url(../ys_img/icon_arrow_bottom_lightGray_16.svg) no-repeat right
+    17px center;
+}
