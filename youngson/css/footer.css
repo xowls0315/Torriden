@@ -1,0 +1,80 @@
+footer {
+  width: 100%;
+  height: 50vh;
+  background-color: #2a3e48;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_contents {
+  width: 70%;
+  height: 100%;
+  max-height: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  color: #cac9cb;
+}
+.footer_contents > h5 {
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+.footer_contents_info {
+  display: flex;
+}
+.footer_contents_info > .footer_contents_info-1,
+.footer_contents_info > .footer_contents_info-2,
+.footer_contents_info > .footer_contents_info-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-right: 60px;
+}
+.footer_contents_info > .footer_contents_info-1 > span,
+.footer_contents_info > .footer_contents_info-2 > span,
+.footer_contents_info > .footer_contents_info-3 > span {
+  display: flex;
+  gap: 50px;
+  font-size: 11px;
+  font-weight: bold;
+}
+.footer_contents_info > .footer_contents_info-1 > span > p,
+.footer_contents_info > .footer_contents_info-2 > span > p,
+.footer_contents_info > .footer_contents_info-3 > span > p {
+  font-weight: normal;
+}
+.footer_contents_info-3 > span {
+  position: relative;
+  padding-left: 12px; /* 점이 들어갈 공간 확보 */
+  cursor: pointer;
+}
+.footer_contents_info-3 > span::before {
+  content: ""; /* 꼭 있어야 보임 */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* 세로 중앙 정렬 */
+  width: 3px; /* 점 크기 */
+  height: 3px;
+  background-color: #cac9cb; /* 점 색상 (텍스트 색이랑 맞춰줌) */
+  border-radius: 50%; /* 원 모양 */
+}
+.footer_contents_info-4 {
+  width: 150px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #2a3e65;
+  background-color: white;
+  cursor: pointer;
+}
+.footer_contents_info-4 > span {
+  font-weight: bold;
+  font-size: 12px;
+  margin-right: auto;
+}
+.footer_contents_info-4 > i {
+  font-size: 12px;
+  font-weight: bold;
+}

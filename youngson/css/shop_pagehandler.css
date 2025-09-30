@@ -1,0 +1,36 @@
+.shop_pagehandler {
+  margin-top: 80px;
+}
+
+.shop_pagehandler > ul {
+  display: table;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+.shop_pagehandler > ul > li {
+  position: relative;
+
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 34px;
+  color: #909090;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #d7d7d5;
+  display: table-cell;
+  background: white;
+}
+
+.shop_pagehandler > ul > .selected {
+  color: #2a3e48;
+}
+.shop_pagehandler > ul > .selected::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: #2a3e48;
+  left: 0;
+  bottom: 0;
+}

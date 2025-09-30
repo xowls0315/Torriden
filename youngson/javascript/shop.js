@@ -5,7 +5,8 @@
 
 const shopData = [
   {
-    item_src: "../ys_img/product1.jpg",
+    item_src:
+      "https://torridtr9977.cdn-nhncommerce.com/data/goods/21/12/51//134/134_magnify_061.jpg",
     item_name:
       "[3종세트] 다이브인 저분자 히알루론산 세럼 50ml + 토너 300ml + 크림80ml+(쇼핑백 증정)",
     item_sale: 42,
@@ -91,6 +92,7 @@ const shopData = [
     item_price: 24000,
   },
 ];
+
 document.addEventListener("DOMContentLoaded", () => {
   const shopItemWrap = document.getElementById("shop_item_wrap");
 
@@ -107,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     card.innerHTML = `
       <div class="shop_item_img_wrap">
-        <img src="${item.item_src}" alt="${item.item_name}" />
+        <img src="${item.item_src}"/>
         <a class="shop_heart_btn">
           <img src="../ys_img/icon_heartbtn.svg" alt="좋아요" />
         </a>
@@ -133,23 +135,15 @@ document.addEventListener("DOMContentLoaded", () => {
         <img src="../ys_img/icon_cart.svg" alt="장바구니" />
       </div>
     `;
-
+    // 마우스 오버 이미지 블러
+    const img = card.querySelector(".shop_item_img_wrap img");
+    img.addEventListener("mouseover", () => {
+      img.style.transition = "filter 0.1s ease";
+      img.style.filter = "blur(1px)";
+      setTimeout(() => {
+        img.style.filter = "blur(0)";
+      }, 200);
+    });
     shopItemWrap.appendChild(card);
-  });
-});
-
-// 마우스 오버 이미지 블러
-const shopImages = document.querySelectorAll(".shop_item_img_wrap img");
-
-shopImages.forEach((img) => {
-  img.addEventListener("mouseover", () => {
-    img.style.transition = "filter 0.15s ease"; // 블러 생기는 시간
-    img.style.filter = "blur(2px)";
-
-    // 0.3초 후 블러 제거
-    setTimeout(() => {
-      img.style.transition = "filter 0.15s ease"; // 선명해지는 시간
-      img.style.filter = "blur(0)";
-    }, 300); // 블러 유지 시간
   });
 });
