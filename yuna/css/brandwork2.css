@@ -66,8 +66,7 @@
   line-height: 34px;
   border: 1px solid #d7d5d5;
 
-  color: #2a3e48;
-  border-bottom: 2px solid#2a3e48;
+  color: #909090;
 }
 .brandwork > .brandwork__pageButton > .brandwork__pageButton-second {
   padding: 0;
@@ -76,7 +75,8 @@
   line-height: 34px;
   border: 1px solid #d7d5d5;
 
-  color: #909090;
+  color: #2a3e48;
+  border-bottom: 2px solid#2a3e48;
 
   margin-bottom: 80px;
 }
