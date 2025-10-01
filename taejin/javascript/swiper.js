@@ -1,3 +1,5 @@
+let productsSwiper; // 공통으로 사용하기 위해 바깥에 선언
+
 document.addEventListener('DOMContentLoaded', () => {
     const heroSwiper = new Swiper('.mainpage_contents2 .swiper', {
         slidesPerView: 1,
@@ -16,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-    const productsSwiper = new Swiper('.products-swiper', {
+    productsSwiper = new Swiper('.products-swiper', {
         slidesPerView: 3, // 한 화면 3장
         slidesPerGroup: 1, // ← 한 칸씩 이동
         spaceBetween: 20,

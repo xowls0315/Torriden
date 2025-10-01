@@ -28,6 +28,7 @@ header > nav > img {
 .nav_menu {
     display: flex;
     gap: 30px;
+    position: relative;
 }
 .nav_menu > li {
     color: #475659;
@@ -41,4 +42,20 @@ header > nav > img {
 .nav_icon > li > i {
     font-size: 24px;
     cursor: pointer;
+}
+.nav_menu_shop {
+    position: relative;
+}
+/* 우측 상단의 작은 점 */
+.nav_menu_shop::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -3px;
+    transform: translate(50%, -50%); /* 모서리 밖으로 살짝 */
+    width: 4px;
+    height: 4px;
+    border-radius: 999px;
+    background: currentColor; /* li의 글자색(#475659)과 동일 */
+    pointer-events: none; /* 클릭 방해 금지 (선택) */
 }

@@ -12,7 +12,6 @@ const wrapper = document.querySelector('.products-swiper .swiper-wrapper');
 // 초기(BEST) 슬라이드 HTML을 배열로 백업
 const bestSlides = Array.from(wrapper.children).map((el) => el.outerHTML);
 
-// 예시 2개만 적음 — 나머지도 같은 형식으로 6개 채워 주세요
 const newSlides = [
     `
   <article class="swiper-slide">
@@ -47,14 +46,24 @@ const newSlides = [
     `
   <article class="swiper-slide">
     <div class="product-thumb">
-      <img src="https://torridtr9977.cdn-nhncommerce.com/data/goods/25/09/37/298/298_main_018.jpg" alt="">
+      <img src="https://torridtr9977.cdn-nhncommerce.com/data/goods/25/08/34/294/246_main_086.jpg" alt="">
       <button class="mainpage_contents3_bests-like-btn" aria-pressed="false" aria-label="찜하기">
         <i class="ri-heart-line" aria-hidden="true"></i>
       </button>
     </div>
-    <span>[가나디 콜라보] [총 100ml] 다이브인 저분자 히알루론산 세럼 50ml (+리필50ml+인형키링)</span>
+    <span>[회원전용특가] [기획세트] 솔리드인 세라마이드 립 에센스 듀오세트</span>
     <div class="product-price">
-      <p><strong>22,900원</strong></p>
+    <p>
+      <strong style="color: #475861">47%</strong>
+      <strong>회원특가 9,900원</strong>
+      <span
+        style="
+          font-size: 12px;
+          color: gainsboro;
+          text-decoration: line-through;
+          "
+      >19,000원</span>
+    </p>
       <i class="ri-shopping-bag-line"></i>
     </div>
   </article>
@@ -62,49 +71,28 @@ const newSlides = [
     `
   <article class="swiper-slide">
     <div class="product-thumb">
-      <img src="https://torridtr9977.cdn-nhncommerce.com/data/goods/25/09/37/298/298_main_018.jpg" alt="">
+      <img src="https://torridtr9977.cdn-nhncommerce.com/data/goods/25/08/31/285/285_main_094.jpg" alt="">
       <button class="mainpage_contents3_bests-like-btn" aria-pressed="false" aria-label="찜하기">
         <i class="ri-heart-line" aria-hidden="true"></i>
       </button>
     </div>
-    <span>[가나디 콜라보] [총 100ml] 다이브인 저분자 히알루론산 세럼 50ml (+리필50ml+인형키링)</span>
+    <span>[3종세트] 다이브인 포맨 저분자 히알루론산 올인원 200g+다이브인 포맨 스킨 300ml+다이브인 포맨 젤 로션 200ml+(포맨 젤로션 2ml*10매)</span>
     <div class="product-price">
-      <p><strong>22,900원</strong></p>
+    <p>
+    <strong style="color: #475861">40%</strong>
+    <strong>39,900원</strong>
+    <span
+      style="
+        font-size: 12px;
+        color: gainsboro;
+        text-decoration: line-through;
+        "
+    >67,000원</span>
+    </p>
       <i class="ri-shopping-bag-line"></i>
     </div>
   </article>
   `,
-    `
-  <article class="swiper-slide">
-    <div class="product-thumb">
-      <img src="https://torridtr9977.cdn-nhncommerce.com/data/goods/25/09/37/298/298_main_018.jpg" alt="">
-      <button class="mainpage_contents3_bests-like-btn" aria-pressed="false" aria-label="찜하기">
-        <i class="ri-heart-line" aria-hidden="true"></i>
-      </button>
-    </div>
-    <span>[가나디 콜라보] [총 100ml] 다이브인 저분자 히알루론산 세럼 50ml (+리필50ml+인형키링)</span>
-    <div class="product-price">
-      <p><strong>22,900원</strong></p>
-      <i class="ri-shopping-bag-line"></i>
-    </div>
-  </article>
-  `,
-    `
-  <article class="swiper-slide">
-    <div class="product-thumb">
-      <img src="https://torridtr9977.cdn-nhncommerce.com/data/goods/25/09/37/298/298_main_018.jpg" alt="">
-      <button class="mainpage_contents3_bests-like-btn" aria-pressed="false" aria-label="찜하기">
-        <i class="ri-heart-line" aria-hidden="true"></i>
-      </button>
-    </div>
-    <span>[가나디 콜라보] [총 100ml] 다이브인 저분자 히알루론산 세럼 50ml (+리필50ml+인형키링)</span>
-    <div class="product-price">
-      <p><strong>22,900원</strong></p>
-      <i class="ri-shopping-bag-line"></i>
-    </div>
-  </article>
-  `,
-    // ...총 6개
 ];
 
 const btnBest = document.getElementById('btnBest');
