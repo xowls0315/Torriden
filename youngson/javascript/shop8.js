@@ -1,8 +1,8 @@
-import { shopData2 } from "./data.js";
+import { shopData8 } from "./data.js";
 document.addEventListener("DOMContentLoaded", () => {
   const shopItemWrap = document.getElementById("shop_item_wrap");
 
-  shopData2.forEach((v) => {
+  shopData8.forEach((v) => {
     const card = document.createElement("div");
     card.className = "shop_item_card";
 

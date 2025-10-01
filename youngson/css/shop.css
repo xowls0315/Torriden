@@ -7,3 +7,9 @@ body {
   margin: 0 auto;
   padding: 80px 0 120px;
 }
+@media screen and (max-width: 768px) {
+  .shop_containor {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+}
