@@ -1,5 +1,3 @@
-const news__table_tbody = document.querySelector(".news__table_tbody");
-
 const data = [
   {
     num: 27,
@@ -72,6 +70,8 @@ const data = [
     view: 436,
   },
 ];
+/*웹버전*/
+const news__table_tbody = document.querySelector(".news__table_tbody");
 
 data.forEach((v) => {
   // 1. tr
@@ -114,6 +114,60 @@ data.forEach((v) => {
   news__table_tbody.appendChild(tr);
 });
 
+/*모바일 버전*/
+const news__mobile_section = document.querySelector(".news__mobile_section");
+
+data.forEach((v) => {
+  // 1. article
+  const article = document.createElement("article");
+  article.classList.add("news__mobile_contens");
+
+  // 2. H3
+  const news__mobile_contents_title = document.createElement("h3");
+  news__mobile_contents_title.innerText = v.title;
+  news__mobile_contents_title.classList.add("news__mobile_contents_title");
+
+  // 3. news__mobile_contents_w_date
+  const news__mobile_contents_w_date = document.createElement("div");
+  news__mobile_contents_w_date.classList.add("news__mobile_contents_w_date");
+
+  // 4. news__mobile_contents_writer
+  const news__mobile_contents_writer = document.createElement("p");
+  news__mobile_contents_writer.innerText = v.writer;
+  news__mobile_contents_writer.classList.add("news__mobile_contents_writer");
+
+  // 5.news__mobile_contents_date
+  const news__mobile_contents_date = document.createElement("p");
+  news__mobile_contents_date.innerText = v.date;
+  news__mobile_contents_date.classList.add("news__mobile_contents_date");
+
+  // 6. news__mobile_contents_r_view
+  const news__mobile_contents_r_view = document.createElement("div");
+  news__mobile_contents_r_view.classList.add("news__mobile_contents_r_view");
+
+  // 7. news__mobile_contents_recommend
+  const news__mobile_contents_recommend = document.createElement("p");
+  news__mobile_contents_recommend.innerText = "추천수 : 0";
+  news__mobile_contents_recommend.classList.add(
+    "news__mobile_contents_recommend"
+  );
+
+  // 8.news__mobile_contents_view
+  const news__mobile_contents_view = document.createElement("p");
+  news__mobile_contents_view.innerText = v.view;
+  news__mobile_contents_view.classList.add("news__mobile_contents_view");
+
+  // 최종 삽입
+  news__mobile_section.appendChild(article);
+  article.appendChild(news__mobile_contents_title);
+  article.appendChild(news__mobile_contents_w_date);
+  news__mobile_contents_w_date.appendChild(news__mobile_contents_writer);
+  news__mobile_contents_w_date.appendChild(news__mobile_contents_date);
+  article.appendChild(news__mobile_contents_r_view);
+  news__mobile_contents_r_view.appendChild(news__mobile_contents_recommend);
+  news__mobile_contents_r_view.appendChild(news__mobile_contents_view);
+});
+
 // 버튼 클릭시 페이지 이동
 const news__pageButton_first = document.querySelector(
   ".news__pageButton-first"
@@ -135,4 +189,14 @@ news__pageButton_second.addEventListener("click", () => {
 
 news__pageButton_third.addEventListener("click", () => {
   location.href = "http://127.0.0.1:5500/yuna/pages/news3.html";
+});
+// 버튼 클릭시 페이지 이동 (mobile)
+const left = document.querySelector(".left");
+const right = document.querySelector(".right");
+
+left.addEventListener("click", () => {
+  location.href = "http://127.0.0.1:5500/yuna/pages/news.html";
+});
+right.addEventListener("click", () => {
+  location.href = "http://127.0.0.1:5500/yuna/pages/news2.html";
 });

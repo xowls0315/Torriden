@@ -15,6 +15,7 @@
   <body>
     <div class="news">
       <h2 class="news__title">공지사항</h2>
+      <!-- 웹 버전 -->
       <section class="news__section">
         <table class="news__table">
           <thead class="news__table_thead">
@@ -28,23 +29,47 @@
           </thead>
           <tbody class="news__table_tbody">
             <!-- JS 내용  -->
+            <!-- <tr class="news__table_row">
+              <td class="news__table_num">1</td>
+              <td class="news__table_title">제목</td>
+              <td class="news__table_date">2025.09.30</td>
+              <td class="news__table_writer">관리자</td>
+              <td class="news__table_view">15</td>
+            </tr> -->
           </tbody>
         </table>
+        <!-- 페이지 버튼(Web) -->
+        <div class="news__pageButtons">
+          <button class="news__pageButton news__pageButton-first">1</button>
+          <button class="news__pageButton news__pageButton-second">2</button>
+          <button class="news__pageButton news__pageButton-third">3</button>
+        </div>
+      </section>
+      <!-- 모바일 버전 -->
+      <section class="news__mobile_section">
+        <!-- <article class="news__mobile_contens">
+          <h3 class="news__mobile_contents_title">제목</h3>
+          <div class="news__mobile_contents_w_date">
+            <p class="news__mobile_contents_writer">관리자</p>
+            <p class="news__mobile_contents_date">2025.09.30</p>
+          </div>
+          <div class="news__mobile_contents_r_view">
+            <span class="news__mobile_contents_recommend"> 추천수0 </span>
+            <span class="news__mobile_contents_view"> 조회수</span>
+          </div>
+        </article> -->
       </section>
 
-      <div class="news__pageButtons">
-        <button class="news__pageButton news__pageButton-first">1</button>
-        <button class="news__pageButton news__pageButton-second">2</button>
-        <button class="news__pageButton news__pageButton-third">3</button>
-      </div>
+      <!-- 페이지 버튼(Mobile) -->
       <div class="news_mobileButton">
         <div class="left">이전</div>
         <div class="news_mobileButton-number">
-          <p class="news_mobileButton-first">1</p>
+          <p class="news_mobileButton-first">2</p>
           <p class="news_mobileButton-second">/</p>
           <p class="news_mobileButton-third">3</p>
         </div>
         <div class="right">이후</div>
+      </div>
     </div>
   </body>
 </html>

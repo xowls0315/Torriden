@@ -87,22 +87,117 @@
 
 /* 페이지 버튼 */
 
-.news__pageButtons > .news__pageButton {
+.news > .news__section > .news__pageButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+}
+
+.news > .news__section > .news__pageButtons > .news__pageButton {
   width: 34px;
   height: 34px;
   line-height: 34px;
   border: 1px solid #d7d5d5;
-  margin: 80px auto;
-
+  margin: 80px 0px;
   color: #909090;
 
   cursor: pointer;
 }
 
-.news__pageButtons > .news__pageButton-third {
+.news > .news__section > .news__pageButtons > .news__pageButton-third {
   color: #2a3e48;
   border-bottom: 2px solid #2a3e48;
 }
+
+/* 모바일버전 */
+.news > .news__mobile_section {
+  display: none;
+}
 .news > .news_mobileButton {
   display: none;
+}
+@media screen and (max-width: 768px) {
+  /* 제목 */
+  .news__title {
+    padding: 30px 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .news > .news__section {
+    display: none;
+  }
+  .news > .news__mobile_section {
+    display: block;
+    width: 100%;
+  }
+  .news > .news__mobile_section > .news__mobile_contens {
+    width: 80%;
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    text-align: start;
+
+    padding: 15px 10px;
+    margin: 0px 20px;
+  }
+  .news__mobile_section > .news__mobile_contens > .news__mobile_contents_w_date,
+  .news__mobile_section
+    > .news__mobile_contens
+    > .news__mobile_contents_r_view {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+  }
+  .news__mobile_section > .news__mobile_contens > .news__mobile_contents_title {
+    font-size: 13px;
+    color: #000;
+    line-height: 24px;
+  }
+  .news__mobile_section
+    > .news__mobile_contens
+    > .news__mobile_contents_w_date {
+    font-size: 10px;
+    line-height: 18px;
+    gap: 5px;
+  }
+  .news__mobile_section
+    > .news__mobile_contens
+    > .news__mobile_contents_r_view {
+    color: #999;
+    font-size: 12px;
+    margin-top: 7px;
+    gap: 5px;
+  }
+
+  /* 모바일 버전 버튼 */
+  .news > .news__pageButtons {
+    display: none;
+  }
+  .news > .news_mobileButton {
+    display: block;
+    margin: 80px 0px;
+    font-size: 12px;
+    color: #929292;
+
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+  }
+  .news > .news_mobileButton > .news_mobileButton-number {
+    gap: 5px;
+
+    display: flex;
+    flex-direction: row;
+  }
+  .news
+    > .news_mobileButton
+    > .news_mobileButton-number
+    > .news_mobileButton-first {
+    color: #000000;
+    font-weight: 700;
+  }
 }

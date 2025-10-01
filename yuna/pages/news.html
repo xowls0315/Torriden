@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Torriden</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="../../reset.css" />
     <link rel="stylesheet" href="../css/news.css" />
     <script src="../javascript/news.js" defer></script>
@@ -15,6 +11,7 @@
   <body>
     <div class="news">
       <h2 class="news__title">공지사항</h2>
+      <!-- 웹 버전 -->
       <section class="news__section">
         <table class="news__table">
           <thead class="news__table_thead">
@@ -37,13 +34,29 @@
             </tr> -->
           </tbody>
         </table>
+        <!-- 페이지 버튼(Web) -->
+        <div class="news__pageButtons">
+          <button class="news__pageButton news__pageButton-first">1</button>
+          <button class="news__pageButton news__pageButton-second">2</button>
+          <button class="news__pageButton news__pageButton-third">3</button>
+        </div>
+      </section>
+      <!-- 모바일 버전 -->
+      <section class="news__mobile_section">
+        <!-- <article class="news__mobile_contens">
+          <h3 class="news__mobile_contents_title">제목</h3>
+          <div class="news__mobile_contents_w_date">
+            <p class="news__mobile_contents_writer">관리자</p>
+            <p class="news__mobile_contents_date">2025.09.30</p>
+          </div>
+          <div class="news__mobile_contents_r_view">
+            <span class="news__mobile_contents_recommend"> 추천수0 </span>
+            <span class="news__mobile_contents_view"> 조회수</span>
+          </div>
+        </article> -->
       </section>
 
-      <div class="news__pageButtons">
-        <button class="news__pageButton news__pageButton-first">1</button>
-        <button class="news__pageButton news__pageButton-second">2</button>
-        <button class="news__pageButton news__pageButton-third">3</button>
-      </div>
+      <!-- 페이지 버튼(Mobile) -->
       <div class="news_mobileButton">
         <div class="left">이전</div>
         <div class="news_mobileButton-number">
