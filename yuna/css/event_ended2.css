@@ -33,7 +33,7 @@
 .event > .event__buttons > .event__buttons-ended {
   color: #000;
   margin-left: 20px;
-  font-size: 18px;
+
   cursor: pointer;
 }
 .event > .event__section {

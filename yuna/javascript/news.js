@@ -39,7 +39,7 @@ const data = [
     title: "토리든 가품 피해 방지",
     date: "2025.03.07",
     writer: "관리자",
-    view: 14753,
+    view: 1753,
   },
   {
     num: 21,
@@ -154,7 +154,7 @@ data.forEach((v) => {
 
   // 8.news__mobile_contents_view
   const news__mobile_contents_view = document.createElement("p");
-  news__mobile_contents_view.innerText = v.view;
+  news__mobile_contents_view.innerText = "조회수 : " + v.view;
   news__mobile_contents_view.classList.add("news__mobile_contents_view");
 
   // 최종 삽입

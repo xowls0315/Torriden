@@ -154,7 +154,7 @@ data.forEach((v) => {
 
   // 8.news__mobile_contents_view
   const news__mobile_contents_view = document.createElement("p");
-  news__mobile_contents_view.innerText = v.view;
+  news__mobile_contents_view.innerText = "조회수 : " + v.view;
   news__mobile_contents_view.classList.add("news__mobile_contents_view");
 
   // 최종 삽입
