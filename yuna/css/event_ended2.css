@@ -18,7 +18,8 @@
 }
 .event > .event__buttons > .event__button {
   color: #9f9f9f;
-  font-size: 16px;
+  margin-right: 20px;
+  font-size: 20px;
   line-height: 30px;
   font-weight: 500;
   background-color: transparent;
@@ -26,14 +27,13 @@
   border: none;
 }
 .event > .event__buttons > .event__buttons-active {
-  margin-right: 20px;
-
   cursor: pointer;
 }
 
 .event > .event__buttons > .event__buttons-ended {
   color: #000;
   margin-left: 20px;
+  font-size: 18px;
   cursor: pointer;
 }
 .event > .event__section {
@@ -52,12 +52,11 @@
 .event > .event__section > .event__section-contents > .event__section-image {
   width: 450px;
   height: 450px;
-
   object-fit: cover;
 }
 .event > .event__section > .event__section-contents > .event__section-title {
   display: block;
-  overflow: hidden;
+
   width: 87%;
   font-size: 18px;
   line-height: 28px;
@@ -65,6 +64,9 @@
   letter-spacing: -0.54px;
   word-break: keep-all;
   margin: 15px 0px;
+}
+.event > .event__pageButtons {
+  margin: 80px 0px;
 }
 
 .event > .event__pageButtons > .event__pageButton {
@@ -83,4 +85,86 @@
 .event > .event__pageButtons > .event__pageButton-second {
   color: #2a3e48;
   border-bottom: 2px solid#2a3e48;
+}
+.event > .event_mobileButton {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .event {
+    background-color: #f5f5f5;
+  }
+  .event > .event__title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .event > .event__section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    gap: 0px;
+  }
+  .event > .event__buttons {
+    margin-top: 25px;
+  }
+  .event > .event__buttons > .event__button {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+  .event > .event__buttons > .event__buttons-active {
+    margin-right: 10px;
+  }
+
+  .event > .event__buttons > .event__buttons-ended {
+    margin-left: 10px;
+  }
+
+  .event > .event__section > .event__section-contents {
+    padding: 20px 30px;
+    margin-top: 00px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .event > .event__section > .event__section-contents > .event__section-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .event > .event__section > .event__section-contents > .event__section-title {
+    font-size: 13px;
+    line-height: 22px;
+    margin: 0px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+  .event > .event__pageButtons {
+    display: none;
+  }
+
+  /* 모바일 버전 버튼 */
+  .event > .event_mobileButton {
+    display: block;
+    margin: 80px 0px;
+    font-size: 12px;
+    color: #929292;
+
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+  }
+  .event > .event_mobileButton > .event_mobileButton-number {
+    gap: 5px;
+
+    display: flex;
+    flex-direction: row;
+  }
+  .event
+    > .event_mobileButton
+    > .event_mobileButton-number
+    > .event_mobileButton-first {
+    color: #000000;
+    font-weight: 700;
+  }
 }

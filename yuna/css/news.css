@@ -86,19 +86,61 @@
 }
 
 /* 페이지 버튼 */
-.news__pageButtons > .news__pageButton {
+
+.news > .news__pageButtons > .news__pageButton {
   width: 34px;
   height: 34px;
   line-height: 34px;
   border: 1px solid #d7d5d5;
-  margin: 80px auto;
-
+  margin: 80px 0px;
   color: #909090;
 
   cursor: pointer;
 }
 
-.news__pageButtons > .news__pageButton-first {
+.news > .news__pageButtons > .news__pageButton-first {
   color: #2a3e48;
   border-bottom: 2px solid #2a3e48;
+}
+.news > .news_mobileButton {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  /* 헤더 숨기기 */
+  .news__table_header {
+    display: none;
+  }
+
+  /* 행을 블록처럼 보이게 */
+  .news__table_row {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* 제목 */
+  .news__table_title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #2a3e48;
+    text-align: left; /* 제목은 왼쪽 정렬 */
+  }
+
+  /* 번호는 숨기기 */
+  .news__table_num {
+    display: none;
+  }
+
+  /* 날짜/작성자/조회수를 한 줄로 */
+  .news__table_date,
+  .news__table_writer,
+  .news__table_view {
+    font-size: 13px;
+    color: #777;
+    display: inline-block;
+    margin-right: 12px;
+    text-align: left;
+  }
 }

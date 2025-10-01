@@ -98,3 +98,13 @@ event__pageButton_second.addEventListener("click", () => {
 event__pageButton_third.addEventListener("click", () => {
   location.href = "http://127.0.0.1:5500/yuna/pages/event_ended3.html";
 });
+// 버튼 클릭시 페이지 이동 (mobile)
+const left = document.querySelector(".ri-arrow-left-s-line");
+const right = document.querySelector(".ri-arrow-right-s-line");
+
+left.addEventListener("click", () => {
+  location.href = "http://127.0.0.1:5500/yuna/pages/event_ended.html";
+});
+right.addEventListener("click", () => {
+  location.href = "http://127.0.0.1:5500/yuna/pages/event_ended3.html";
+});
