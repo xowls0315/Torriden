@@ -3,7 +3,7 @@ import { shopData2 } from "../javascript/data.js";
 document.addEventListener("DOMContentLoaded", () => {
   const shopItemWrap = document.getElementById("shop_item_wrap");
 
-  shopData1.forEach((item) => {
+  shopData2.forEach((item) => {
     const card = document.createElement("div");
     card.className = "shop_item_card";
 
@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
         <img src="../ys_img/icon_cart.svg" alt="장바구니" />
       </div>
     `;
-    // 마우스 오버 이미지 블러
     const img = card.querySelector(".shop_item_img_wrap img");
     img.addEventListener("mouseover", () => {
       img.style.transition = "filter 0.1s ease";

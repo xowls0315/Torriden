@@ -16,8 +16,9 @@
 }
 .shop_item_card > .shop_item_img_wrap > img {
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
+
 .shop_item_card > .shop_item_img_wrap > .shop_heart_btn {
   position: absolute;
   bottom: 18px;

@@ -1,4 +1,12 @@
 import { shopData1 } from "../javascript/data.js";
+import { shopData2 } from "../javascript/data.js";
+import { shopData3 } from "../javascript/data.js";
+import { shopData4 } from "../javascript/data.js";
+import { shopData5 } from "../javascript/data.js";
+import { shopData6 } from "../javascript/data.js";
+import { shopData7 } from "../javascript/data.js";
+import { shopData8 } from "../javascript/data.js";
+import { shopData9 } from "../javascript/data.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const shopItemWrap = document.getElementById("shop_item_wrap");
