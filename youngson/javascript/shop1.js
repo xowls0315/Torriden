@@ -51,3 +51,16 @@ document.addEventListener("DOMContentLoaded", () => {
     shopItemWrap.appendChild(card);
   });
 });
+
+document.querySelectorAll(".shop_pagehandler li").forEach(
+  (v) =>
+    (v.onclick = () => {
+      document
+        .querySelector(".shop_page_selected")
+        ?.classList.remove("shop_page_selected");
+      v.classList.add("shop_page_selected");
+
+      const pageNum = v.innerText;
+      location.href = `shop${pageNum}.html`;
+    })
+);
