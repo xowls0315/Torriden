@@ -128,21 +128,43 @@
     );
 
     function scan() {
-        document.querySelectorAll(SELECTOR).forEach((el) => io.observe(el));
+        document.querySelectorAll(SELECTOR).forEach((el) => {
+            // ① 항상 초기 상태로 강제(투명 + 시작 위치)
+            reset(el);
+
+            // ② 스와이퍼 내부면 IO로는 관찰하지 않음 (중복 재생 방지)
+            if (el.closest('.aboutpage-swiper')) return;
+
+            io.observe(el);
+        });
     }
 
     // Swiper 연동(선택): 활성 슬라이드에서만 재생/리셋
     function hookSwiper(swiper) {
         if (!swiper || !swiper.on) return;
+
+        // 현재 슬라이드의 "보이는" 모션 컨테이너만 골라 reset/play
+        const getVisibleContainers = (slide) =>
+            Array.from(slide.querySelectorAll(SELECTOR))
+                // 1) 자신 또는 조상 중 .is-hidden 이면 제외
+                .filter((c) => !c.closest('.is-hidden'))
+                // 2) CSS로 숨김(display:none 등) 상태도 제외
+                .filter((c) => c.offsetParent !== null);
+
+        // 첫 활성 슬라이드도 즉시 reset (초기 깜빡임 방지)
+        const first = swiper.slides?.[swiper.activeIndex];
+        if (first) getVisibleContainers(first).forEach(reset);
+
         swiper.on('slideChangeTransitionStart', () => {
             const slide = swiper.slides[swiper.activeIndex];
             if (!slide) return;
-            slide.querySelectorAll(SELECTOR).forEach(reset);
+            getVisibleContainers(slide).forEach(reset);
         });
+
         swiper.on('slideChangeTransitionEnd', () => {
             const slide = swiper.slides[swiper.activeIndex];
             if (!slide) return;
-            slide.querySelectorAll(SELECTOR).forEach(play);
+            getVisibleContainers(slide).forEach(play);
         });
     }
 

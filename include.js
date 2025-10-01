@@ -11,6 +11,10 @@ function includeHTML(selector, file) {
 
 // DOM 준비되면 실행
 document.addEventListener('DOMContentLoaded', () => {
-    includeHTML('#header', './taejin/pages/header.html');
-    includeHTML('#footer', './taejin/pages/footer.html');
+    const baseURL = new URL(import.meta.url); // /include.js의 위치
+    const headerURL = new URL('./taejin/pages/header.html', baseURL).href;
+    const footerURL = new URL('./taejin/pages/footer.html', baseURL).href;
+
+    includeHTML('#header', headerURL);
+    includeHTML('#footer', footerURL);
 });

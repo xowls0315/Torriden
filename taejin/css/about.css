@@ -1,0 +1,279 @@
+/* === PREHIDE: 처음엔 전부 투명하게 === */
+[data-motion] > * {
+    opacity: 0;
+}
+/* about 페이지에서만 문서 스크롤 막기 (휠 입력을 Swiper가 받도록) */
+.about-page {
+    overflow: hidden; /* 데스크탑 위주. 모바일은 필요시 미디어쿼리로 해제 가능 */
+}
+/* ✅ 세로 풀페이지 스와이퍼 */
+.aboutpage-swiper {
+    height: calc(100vh - var(--header-height));
+    padding-top: var(--header-height); /* 헤더 높이만큼 아래로 */
+}
+/* 공통: 슬라이드 자체에 개별 높이를 준다(형제 슬라이드 기준!) */
+.aboutpage_content1,
+.aboutpage_content2,
+.aboutpage_content3,
+.aboutpage_content4,
+.aboutpage_content5,
+.aboutpage_content6 {
+    height: calc(100vh - var(--header-height));
+}
+/* 푸터 슬라이드만 50vh */
+.aboutpage_footer {
+    height: 50vh !important;
+}
+/* 기존 가운데 정렬은 유지해도 됨(원하면 top 정렬로 바꿔도 무방) */
+.aboutpage-swiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* 그대로 유지 */
+}
+/* 푸터 컨테이너가 슬라이드 안에서만 스크롤 되도록 */
+.aboutpage_footer_inner {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+/* footer.css에 fixed가 있다면 해제 */
+#footer {
+    position: static !important;
+    inset: auto !important;
+}
+
+/* 각 슬라이드 = 한 화면 */
+.aboutpage-swiper .swiper-slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.aboutpage_content1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutpage_content1 > .about_content1_video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 0;
+}
+.aboutpage_content1 > h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 100px;
+    font-weight: bold;
+    color: #daeaf1;
+}
+
+.aboutpage_content2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.aboutpage_content2-1,
+.aboutpage_content2-2 {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} /* 초기는 2-1만 보이게, 2-2는 숨김 */
+.aboutpage_content2-2 {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+} /* 숨김/보임 상태 전환용(애니메이션 끝난 뒤 토글) */
+.is-hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+.is-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+} /* 보기 좋게 타이포 조금 */
+.aboutpage_content2-1 h2 {
+    font-size: 65px;
+    font-weight: 700;
+}
+.aboutpage_content2-2_text {
+    display: flex;
+    align-items: center;
+    gap: 300px;
+}
+.aboutpage_content2-2_text h1 {
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.aboutpage_content2-2_text span {
+    font-size: 25px;
+    line-height: 1.6;
+}
+
+.aboutpage_content3 {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.torriden.com/data/skin/front/moment_C/wib/img/brandStory/page03_img.png');
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.aboutpage_content3_text {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.aboutpage_content3_text > span {
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.aboutpage_content4 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.aboutpage_content4 .panel {
+    position: absolute;
+    inset: 0; /* top/right/bottom/left:0 */
+    display: flex;
+    width: 100%;
+    height: 100%;
+    will-change: transform, opacity;
+}
+.aboutpage_content4-1 {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+}
+.aboutpage_content4-1 > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-right: 1px solid black;
+}
+.aboutpage_content4-1 > div > h5 {
+    font-size: 28px;
+    font-weight: bold;
+}
+.aboutpage_content4-1 > div > span {
+    font-size: 18px;
+}
+
+.aboutpage_content4-2,
+.aboutpage_content4-3,
+.aboutpage_content4-4 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.aboutpage_content4-2_text,
+.aboutpage_content4-3_text,
+.aboutpage_content4-4_text {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    border-right: 1px solid black;
+}
+.aboutpage_content4-2_text > h3,
+.aboutpage_content4-3_text > h3,
+.aboutpage_content4-4_text > h3 {
+    font-size: 36px;
+    font-weight: bold;
+}
+.aboutpage_content4-2_text > span,
+.aboutpage_content4-3_text > span,
+.aboutpage_content4-4_text > span {
+    font-size: 22px;
+    font-weight: bold;
+}
+.aboutpage_content4-2_text > p,
+.aboutpage_content4-3_text > p,
+.aboutpage_content4-4_text > p {
+    font-size: 18px;
+    line-height: 1.4;
+}
+.aboutpage_content4-2_img {
+    width: 50%;
+    height: 100%;
+    background-image: url('https://www.torriden.com/data/skin/front/moment_C/wib/img/brandStory/page05_img01.png');
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.aboutpage_content4-3_img {
+    width: 50%;
+    height: 100%;
+    background-image: url('https://www.torriden.com/data/skin/front/moment_C/wib/img/brandStory/page05_img02.png');
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.aboutpage_content4-4_img {
+    width: 50%;
+    height: 100%;
+    background-image: url('https://www.torriden.com/data/skin/front/moment_C/wib/img/brandStory/page05_img03.png');
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.aboutpage_content5 {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.torriden.com/data/skin/front/moment_C/wib/img/brandStory/page06_img.png');
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.aboutpage_content5_text {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+.aboutpage_content5_text > span {
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.aboutpage_content6 {
+    width: 100%;
+    height: 100%;
+}
+.aboutpage_content6_text {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.aboutpage_content6_text > h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.aboutpage_content6_image {
+    width: 310px;
+}
+.aboutpage_content6_image > img {
+    width: 100%;
+    object-fit: cover;
+}
