@@ -137,12 +137,15 @@ main {
     position: relative;
     z-index: 1;
 }
+.mainpage_contents1 > article > h6 {
+    font-size: 20px;
+}
 .mainpage_contents1-1 > span,
 .mainpage_contents1-2 > span,
 .mainpage_contents1-3 > span,
 .mainpage_contents1-4 > span,
 .mainpage_contents1-5 > span {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .mainpage_contents2 {
