@@ -54,5 +54,6 @@
   }
   .shop_pagehandler > .shop_page_moreload {
     display: block;
+    cursor: pointer;
   }
 }

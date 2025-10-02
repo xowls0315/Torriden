@@ -64,3 +64,12 @@ document.querySelectorAll(".shop_pagehandler li").forEach(
       location.href = `shop${pageNum}.html`;
     })
 );
+function checkScreenAndRedirect() {
+  if (window.innerWidth <= 768) {
+    if (!location.pathname.includes("shop1.html")) {
+      location.href = "shop1.html";
+    }
+  }
+}
+window.addEventListener("load", checkScreenAndRedirect);
+window.addEventListener("resize", checkScreenAndRedirect);

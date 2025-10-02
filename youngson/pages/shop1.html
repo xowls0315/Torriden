@@ -1,76 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Torriden</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Torriden</title>
 
-        <link rel="stylesheet" href="../../reset.css" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="../../taejin/css/header.css" />
-        <link rel="stylesheet" href="../../taejin/css/footer.css" />
-        <link rel="stylesheet" href="../css/shop.css" />
-        <link rel="stylesheet" href="../css/shop_header.css" />
-        <link rel="stylesheet" href="../css/shop_item.css" />
-        <link rel="stylesheet" href="../css/shop_pagehandler.css" />
+    <link rel="stylesheet" href="../../reset.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../taejin/css/header.css" />
+    <link rel="stylesheet" href="../../taejin/css/footer.css" />
+    <link rel="stylesheet" href="../css/shop.css" />
+    <link rel="stylesheet" href="../css/shop_header.css" />
+    <link rel="stylesheet" href="../css/shop_item.css" />
+    <link rel="stylesheet" href="../css/shop_pagehandler.css" />
 
-        <script type="module" src="../../include.js" defer></script>
-        <script src="../javascript/shopData.js" defer></script>
-        <script src="../javascript/data.js" defer></script>
-        <script type="module" src="../javascript/shop1.js" defer></script>
-    </head>
-    <body>
-        <!-- 공통 header -->
-        <div id="header"></div>
+    <script type="module" src="../../include.js" defer></script>
 
-        <!-- Shop page 전체 컨테이너 -->
-        <section class="shop_containor">
-            <!-- Shop 헤더 -->
-            <div class="shop_header_wrap">
-                <div class="shop_header">ALL</div>
-                <!-- Shop 헤더 인포 -->
-                <div class="shop_header_info">
-                    <span class="nonreactSpan"
-                        >총 <strong>103</strong>개의 상품이 있습니다.</span
-                    >
-                    <span class="reactSpan">총 <strong>103개 </strong></span>
+    <script src="../javascript/data.js"></script>
+    <script type="module" src="../javascript/shopmain.js" defer></script>
+    <!-- <script type="module" src="../javascript/shop1.js" defer></script> -->
+  </head>
+  <body>
+    <!-- 공통 header -->
+    <div id="header"></div>
 
-                    <select class="shop_sort_selector">
-                        <option>인기순</option>
-                        <option>신상품순</option>
-                        <option>판매량순</option>
-                        <option>낮은가격</option>
-                        <option>높은가격</option>
-                    </select>
-                </div>
-            </div>
+    <!-- Shop page 전체 컨테이너 -->
+    <section class="shop_containor">
+      <!-- Shop 헤더 -->
+      <div class="shop_header_wrap">
+        <div class="shop_header">ALL</div>
+        <!-- Shop 헤더 인포 -->
+        <div class="shop_header_info">
+          <span class="nonreactSpan"
+            >총 <strong>103</strong>개의 상품이 있습니다.</span
+          >
+          <span class="reactSpan">총 <strong>103개 </strong></span>
 
-            <!-- Shop 아이템카드배포 -->
-            <div class="shop_item_wrap" id="shop_item_wrap"></div>
+          <select class="shop_sort_selector">
+            <option>인기순</option>
+            <option>신상품순</option>
+            <option>판매량순</option>
+            <option>낮은가격</option>
+            <option>높은가격</option>
+          </select>
+        </div>
+      </div>
 
-            <!-- Shop 하단 페이지선택 핸들러 -->
-            <div class="shop_pagehandler">
-                <button class="shop_page_moreload">더보기</button>
-                <ul class="shop_page_remote">
-                    <li class="shop_page_selected"><span>1</span></li>
-                    <li>
-                        <span>2</span>
-                    </li>
-                    <li><span>3</span></li>
-                    <li><span>4</span></li>
-                    <li><span>5</span></li>
-                    <li><span>6</span></li>
-                    <li><span>7</span></li>
-                    <li><span>8</span></li>
-                    <li><span>9</span></li>
-                </ul>
-            </div>
-        </section>
+      <!-- Shop 아이템카드배포 -->
+      <div class="shop_item_wrap" id="shop_item_wrap"></div>
 
-        <!-- 공통 footer -->
-        <div id="footer"></div>
-    </body>
+      <!-- Shop 하단 페이지선택 핸들러 -->
+      <div class="shop_pagehandler">
+        <button class="shop_page_moreload">더보기</button>
+        <ul class="shop_page_remote">
+          <li class="shop_page_selected"><span>1</span></li>
+          <li>
+            <span>2</span>
+          </li>
+          <li><span>3</span></li>
+          <li><span>4</span></li>
+          <li><span>5</span></li>
+          <li><span>6</span></li>
+          <li><span>7</span></li>
+          <li><span>8</span></li>
+          <li><span>9</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 공통 footer -->
+    <div id="footer"></div>
+  </body>
 </html>

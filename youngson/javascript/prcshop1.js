@@ -1,8 +1,18 @@
-import { shopData1 } from "./data.js";
+import {
+  shopData1,
+  shopData2,
+  shopData3,
+  shopData4,
+  shopData5,
+  shopData6,
+  shopData7,
+  shopData8,
+  shopData9,
+} from "./data.js";
 document.addEventListener("DOMContentLoaded", () => {
   const shopItemWrap = document.getElementById("shop_item_wrap");
 
-  shopData1.forEach((v) => {
+  const viewShopPage1 = shopData1.forEach((v) => {
     const card = document.createElement("div");
     card.className = "shop_item_card";
 
@@ -64,3 +74,8 @@ document.querySelectorAll(".shop_pagehandler li").forEach(
       location.href = `shop${pageNum}.html`;
     })
 );
+
+const moreload = document.querySelector(".shop_page_moreload");
+moreload.addEventListener("click", () => {
+  viewShopPage1;
+});
