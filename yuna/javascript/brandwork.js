@@ -81,28 +81,3 @@ data.forEach((v) => {
   // 6. 최종 삽입
   brandwork__section.appendChild(article);
 });
-// 버튼 클릭시 페이지 이동 (Web)
-const brandwork__pageButton_first = document.querySelector(
-  ".brandwork__pageButton-first"
-);
-const brandwork__pageButton_second = document.querySelector(
-  ".brandwork__pageButton-second"
-);
-
-brandwork__pageButton_first.addEventListener("click", () => {
-  a.href = "http://127.0.0.1:5500/yuna/pages/brandwork.html";
-});
-
-brandwork__pageButton_second.addEventListener("click", () => {
-  a.href = "http://127.0.0.1:5500/yuna/pages/brandwork2.html";
-});
-// // 버튼 클릭시 페이지 이동 (mobile)
-// const left = document.querySelector(".left");
-// const right = document.querySelector(".ri-arrow-right-s-line");
-
-// left.addEventListener("click", () => {
-//   location.href = "/Torriden/yuna/pages/brandwork.html";
-// });
-// right.addEventListener("click", () => {
-//   location.href = "/Torriden/yuna/pages/brandwork.html";
-// });

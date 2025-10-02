@@ -66,7 +66,13 @@
   margin: 15px 0px;
 }
 .event > .event__pageButtons {
-  margin: 80px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  margin: 80px auto;
 }
 
 .event > .event__pageButtons > .event__pageButton {
@@ -75,6 +81,8 @@
   height: 34px;
   line-height: 34px;
   border: 1px solid #d7d5d5;
+  text-align: center;
+  text-decoration: none;
 
   color: #909090;
 
@@ -149,10 +157,15 @@
     margin: 80px 0px;
     font-size: 12px;
     color: #929292;
-
+    text-decoration: none;
     display: flex;
     flex-direction: row;
     gap: 17px;
+    text-decoration: none;
+  }
+  .event > .event_mobileButton > .event_mobileButton-left,
+  .event > .event_mobileButton > .event_mobileButton-right {
+    text-decoration: none;
   }
   .event > .event_mobileButton > .event_mobileButton-number {
     gap: 5px;
