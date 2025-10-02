@@ -1,75 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Torriden</title>
-    <link rel="stylesheet" href="../../reset.css" />
-    <link rel="stylesheet" href="../css/news.css" />
-    <script src="../javascript/news.js" defer></script>
-  </head>
-  <body>
-    <div class="news">
-      <h2 class="news__title">공지사항</h2>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Torriden</title>
+        <link rel="stylesheet" href="../../reset.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../../taejin/css/header.css" />
+        <link rel="stylesheet" href="../../taejin/css/footer.css" />
+        <link rel="stylesheet" href="../css/news.css" />
 
-      <!-- 웹 버전 -->
-      <section class="news__section">
-        <table class="news__table">
-          <thead class="news__table_thead">
-            <tr class="news__table_header">
-              <th class="news__table_num">번호</th>
-              <th class="news__table_title">제목</th>
-              <th class="news__table_date">날짜</th>
-              <th class="news__table_writer">작성자</th>
-              <th class="news__table_view">조회</th>
-            </tr>
-          </thead>
-          <tbody class="news__table_tbody">
-            <!-- java script -->
+        <script type="module" src="../../include.js" defer></script>
+        <script src="../javascript/news.js" defer></script>
+    </head>
+    <body>
+        <!-- 공통 header -->
+        <div id="header"></div>
 
-            <!-- CONTENTS 내용 -->
-          </tbody>
-        </table>
-        <!-- 페이지 버튼(Web) -->
-        <div class="news__pageButtons">
-          <a
-            href="../../yuna/pages/news.html"
-            class="news__pageButton news__pageButton-first"
-            >1</a
-          >
-          <a
-            href="../../yuna/pages/news2.html"
-            class="news__pageButton news__pageButton-second"
-            >2</a
-          >
-          <a
-            href="../../yuna/pages/news3.html"
-            class="news__pageButton news__pageButton-third"
-            >3</a
-          >
+        <div class="news">
+            <h2 class="news__title">공지사항</h2>
+
+            <!-- 웹 버전 -->
+            <section class="news__section">
+                <table class="news__table">
+                    <thead class="news__table_thead">
+                        <tr class="news__table_header">
+                            <th class="news__table_num">번호</th>
+                            <th class="news__table_title">제목</th>
+                            <th class="news__table_date">날짜</th>
+                            <th class="news__table_writer">작성자</th>
+                            <th class="news__table_view">조회</th>
+                        </tr>
+                    </thead>
+                    <tbody class="news__table_tbody">
+                        <!-- java script -->
+
+                        <!-- CONTENTS 내용 -->
+                    </tbody>
+                </table>
+                <!-- 페이지 버튼(Web) -->
+                <div class="news__pageButtons">
+                    <a
+                        href="../../yuna/pages/news.html"
+                        class="news__pageButton news__pageButton-first"
+                        >1</a
+                    >
+                    <a
+                        href="../../yuna/pages/news2.html"
+                        class="news__pageButton news__pageButton-second"
+                        >2</a
+                    >
+                    <a
+                        href="../../yuna/pages/news3.html"
+                        class="news__pageButton news__pageButton-third"
+                        >3</a
+                    >
+                </div>
+            </section>
+            <!-- 모바일 버전 -->
+            <section class="news__mobile_section">
+                <!-- java script -->
+
+                <!-- CONTENTS 내용 -->
+            </section>
+
+            <!-- 페이지 버튼(Mobile) -->
+            <div class="news_mobileButton">
+                <a
+                    href="../../yuna/pages/news.html"
+                    class="news_mobileButton-left"
+                >
+                    이전
+                </a>
+                <div class="news_mobileButton-number">
+                    <span class="news_mobileButton-first">1</span>
+                    <span class="news_mobileButton-second">/</span>
+                    <span class="news_mobileButton-third">3</span>
+                </div>
+                <a
+                    href="../../yuna/pages/news2.html"
+                    class="news_mobileButton-right"
+                >
+                    이후
+                </a>
+            </div>
         </div>
-      </section>
-      <!-- 모바일 버전 -->
-      <section class="news__mobile_section">
-        <!-- java script -->
 
-        <!-- CONTENTS 내용 -->
-      </section>
-
-      <!-- 페이지 버튼(Mobile) -->
-      <div class="news_mobileButton">
-        <a href="../../yuna/pages/news.html" class="news_mobileButton-left">
-          이전
-        </a>
-        <div class="news_mobileButton-number">
-          <span class="news_mobileButton-first">1</span>
-          <span class="news_mobileButton-second">/</span>
-          <span class="news_mobileButton-third">3</span>
-        </div>
-        <a href="../../yuna/pages/news2.html" class="news_mobileButton-right">
-          이후
-        </a>
-      </div>
-    </div>
-  </body>
+        <!-- 공통 footer -->
+        <div id="footer"></div>
+    </body>
 </html>
