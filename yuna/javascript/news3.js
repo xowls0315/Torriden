@@ -146,36 +146,3 @@ data.forEach((v) => {
   news__mobile_contents_r_view.appendChild(news__mobile_contents_recommend);
   news__mobile_contents_r_view.appendChild(news__mobile_contents_view);
 });
-
-// 버튼 클릭시 페이지 이동
-const news__pageButton_first = document.querySelector(
-  ".news__pageButton-first"
-);
-const news__pageButton_second = document.querySelector(
-  ".news__pageButton-second"
-);
-const news__pageButton_third = document.querySelector(
-  ".news__pageButton-third"
-);
-
-news__pageButton_first.addEventListener("click", () => {
-  location.href = "http://127.0.0.1:5500/yuna/pages/news.html";
-});
-
-news__pageButton_second.addEventListener("click", () => {
-  location.href = "http://127.0.0.1:5500/yuna/pages/news2.html";
-});
-
-news__pageButton_third.addEventListener("click", () => {
-  location.href = "http://127.0.0.1:5500/yuna/pages/news3.html";
-});
-// 버튼 클릭시 페이지 이동 (mobile)
-const left = document.querySelector(".left");
-const right = document.querySelector(".right");
-
-left.addEventListener("click", () => {
-  location.href = "http://127.0.0.1:5500/yuna/pages/news2.html";
-});
-right.addEventListener("click", () => {
-  location.href = "http://127.0.0.1:5500/yuna/pages/news3.html";
-});

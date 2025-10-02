@@ -64,16 +64,3 @@ data.forEach((v) => {
   // 5. 최종 삽입
   event__section.appendChild(article);
 });
-
-// 버튼 클릭시 페이지 이동
-
-//이벤트 진행 관련
-const event__buttons_active = document.querySelector(".event__buttons-active");
-const event__buttons_ended = document.querySelector(".event__buttons-ended");
-
-event__buttons_active.addEventListener("click", () => {
-  location.href = "http://127.0.0.1:5500/yuna/pages/event_active.html";
-});
-event__buttons_ended.addEventListener("click", () => {
-  location.href = "http://127.0.0.1:5500/yuna/pages/event_ended.html";
-});
