@@ -67,3 +67,15 @@ header > nav a img {
     text-decoration: none;
     display: inline-block; /* li 전체 클릭 느낌 원하면 li {position:relative}와 함께 padding으로 영역 키우기 */
 }
+
+@media screen and (max-width: 768px) {
+    header > nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav_icon {
+        display: none;
+    }
+}

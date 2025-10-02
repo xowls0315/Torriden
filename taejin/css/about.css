@@ -277,3 +277,173 @@
     width: 100%;
     object-fit: cover;
 }
+
+/* =========================================
+   About 반응형 (max-width: 768px)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    /* 뷰포트 대응: 주소창 높이 변화에 안전 */
+    .aboutpage-swiper {
+        height: calc(100dvh - var(--header-height));
+        padding-top: var(--header-height);
+    }
+
+    /* 모든 슬라이드는 좌우 여백 조금 주고, 요소 겹침 방지 */
+    .aboutpage-swiper .swiper-slide {
+        padding: 0 20px;
+    }
+
+    /* (공통) 한 화면 높이 슬라이드: 모바일에선 dvh 우선 */
+    .aboutpage_content1,
+    .aboutpage_content2,
+    .aboutpage_content3,
+    .aboutpage_content4,
+    .aboutpage_content5,
+    .aboutpage_content6 {
+        height: calc(100dvh - var(--header-height));
+    }
+
+    /* ====== 1. Hero 비디오 ====== */
+    .aboutpage_content1 > h1 {
+        font-size: 44px; /* 100px → 44px */
+        line-height: 1.1;
+        text-align: center;
+        padding: 0 8px;
+    }
+
+    /* ====== 2. Slogan → 스택 정렬 ====== */
+    .aboutpage_content2-1 h2 {
+        font-size: 34px; /* 65 → 34 */
+        text-align: center;
+    }
+    .aboutpage_content2-2_text {
+        flex-direction: column; /* 좌우 → 상하 */
+        align-items: flex-start; /* 문단 시작 정렬 */
+        gap: 16px; /* 300px → 16px */
+    }
+    .aboutpage_content2-2_text h1 {
+        font-size: 32px; /* 65 → 32 */
+        line-height: 1.25;
+    }
+    .aboutpage_content2-2_text span {
+        font-size: 16px; /* 25 → 16 */
+        line-height: 1.6;
+    }
+
+    /* ====== 3. 배경이미지 + 문장 ====== */
+    .aboutpage_content3_text {
+        width: 90%; /* 75% → 90% */
+        gap: 20px; /* 50 → 20 */
+    }
+    .aboutpage_content3_text > span {
+        font-size: 16px; /* 22 → 16 */
+        line-height: 1.6;
+    }
+
+    /* ====== 4. 3패널(요약) + 디테일 패널 ====== */
+
+    /* (요약: SIMPLE/TOGETHER/POSITIVE) 가로 3분할 → 세로 스택 */
+    .aboutpage_content4-1 {
+        flex-direction: column;
+        gap: 14px;
+    }
+    .aboutpage_content4-1 > div {
+        border-right: none; /* 세로 구분선 제거 */
+        border-bottom: 1px solid #000; /* 항목 사이 구분선 */
+        padding: 20px 10px;
+        gap: 10px;
+    }
+    .aboutpage_content4-1 > div:last-child {
+        border-bottom: none;
+    }
+    .aboutpage_content4-1 > div > h5 {
+        font-size: 20px; /* 28 → 20 */
+    }
+    .aboutpage_content4-1 > div > span {
+        font-size: 14px; /* 18 → 14 */
+        text-align: center;
+    }
+
+    /* (디테일: 텍스트/이미지 2열 → 1열 스택) */
+    .aboutpage_content4-2,
+    .aboutpage_content4-3,
+    .aboutpage_content4-4 {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .aboutpage_content4-2_text,
+    .aboutpage_content4-3_text,
+    .aboutpage_content4-4_text {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-right: none;
+        padding: 24px 10px 8px;
+        gap: 16px;
+    }
+    .aboutpage_content4-2_text > h3,
+    .aboutpage_content4-3_text > h3,
+    .aboutpage_content4-4_text > h3 {
+        font-size: 26px; /* 36 → 26 */
+    }
+    .aboutpage_content4-2_text > span,
+    .aboutpage_content4-3_text > span,
+    .aboutpage_content4-4_text > span {
+        font-size: 16px; /* 22 → 16 */
+        font-weight: 600;
+    }
+    .aboutpage_content4-2_text > p,
+    .aboutpage_content4-3_text > p,
+    .aboutpage_content4-4_text > p {
+        font-size: 14px; /* 18 → 14 */
+        line-height: 1.7;
+    }
+
+    /* 이미지 블록: 가로 50% → 전체폭, 높이는 화면의 40~45dvh */
+    .aboutpage_content4-2_img,
+    .aboutpage_content4-3_img,
+    .aboutpage_content4-4_img {
+        width: 100%;
+        height: 42dvh;
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+
+    /* ====== 5. 문장형 슬라이드 ====== */
+    .aboutpage_content5_text {
+        width: 90%;
+        gap: 10px;
+    }
+    .aboutpage_content5_text > span {
+        font-size: 16px; /* 22 → 16 */
+        line-height: 1.6;
+    }
+
+    /* ====== 6. 마지막 슬라이드 ====== */
+    .aboutpage_content6_text {
+        gap: 20px;
+        padding-bottom: calc(16px + env(safe-area-inset-bottom));
+    }
+    .aboutpage_content6_text > h3 {
+        font-size: 20px; /* 24 → 20 */
+        text-align: center;
+    }
+    .aboutpage_content6_image {
+        width: min(82%, 280px); /* 310px → 유동 */
+    }
+
+    /* ====== 7. 푸터 슬라이드 ====== */
+    .aboutpage_footer {
+        height: auto !important; /* 50vh 고정 해제 */
+        min-height: 60dvh; /* 너무 짧지 않게 최소 높이 */
+    }
+    .aboutpage_footer_inner {
+        padding: 16px 0;
+    }
+
+    /* (선택) 모바일에서 본문 스크롤을 허용하고 싶다면 주석 해제
+     .about-page { overflow: auto; } */
+}
