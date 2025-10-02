@@ -26,7 +26,6 @@
   font-weight: 700;
 }
 .shop_header_wrap > .shop_header_info > .shop_sort_selector {
-  /* slect 태그 보더, 화살표 지우기 */
   appearance: none;
   outline: none;
 

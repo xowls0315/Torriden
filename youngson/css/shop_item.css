@@ -73,6 +73,7 @@
 .shop_item_cart_wrap > span {
   font-size: 12px;
 }
+
 @media screen and (max-width: 768px) {
   .shop_item_wrap {
     padding: 0 12px;

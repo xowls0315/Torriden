@@ -511,20 +511,19 @@ export const shopData6 = [
     item_sale: 28,
     item_price: 23000,
   },
-  //   itemsale, price 둘다 0일경우 신규회원 전용상품
   {
     item_src:
       "https://torridtr9977.cdn-nhncommerce.com/data/goods/25/09/36/297/297_main_06.jpg",
     item_name: "[9월 신규회원 특가템] 다이브인 클렌징 폼 150ml",
     item_sale: 0,
-    item_price: "신규회원 전용상품",
+    item_price: 9000,
   },
   {
     item_src:
       "https://torridtr9977.cdn-nhncommerce.com/data/goods/25/09/36/296/296_main_094.jpg",
     item_name: "[9월 신규회원 특가템] 밸런스풀 시카 톤업 선크림 60ml",
     item_sale: 0,
-    item_price: "신규회원 전용상품",
+    item_price: 9000,
   },
   {
     item_src:
