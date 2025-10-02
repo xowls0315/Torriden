@@ -2,7 +2,7 @@
     --header-height: 80px;
 }
 header {
-    width: 100%;
+    width: 100vw;
     height: var(--header-height);
     z-index: 999;
     position: fixed;

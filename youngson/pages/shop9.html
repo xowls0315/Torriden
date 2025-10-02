@@ -1,52 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Torriden</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Torriden</title>
 
-    <link rel="stylesheet" href="../../reset.css" />
+        <link rel="stylesheet" href="../../reset.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../../taejin/css/header.css" />
+        <link rel="stylesheet" href="../../taejin/css/footer.css" />
+        <link rel="stylesheet" href="../css/shop.css" />
+        <link rel="stylesheet" href="../css/shop_header.css" />
+        <link rel="stylesheet" href="../css/shop_item.css" />
+        <link rel="stylesheet" href="../css/shop_pagehandler.css" />
 
-    <link rel="stylesheet" href="../css/shop.css" />
-    <link rel="stylesheet" href="../css/shop_header.css" />
-    <link rel="stylesheet" href="../css/shop_item.css" />
-    <link rel="stylesheet" href="../css/shop_pagehandler.css" />
+        <script type="module" src="../../include.js" defer></script>
+        <script src="../javascript/data.js" defer></script>
+        <script type="module" src="../javascript/shop9.js" defer></script>
+    </head>
+    <body>
+        <!-- 공통 header -->
+        <div id="header"></div>
 
-    <script src="../javascript/data.js" defer></script>
-    <script type="module" src="../javascript/shop9.js" defer></script>
-  </head>
-  <body>
-    <section class="shop_containor">
-      <div class="shop_header_wrap">
-        <div class="shop_header">ALL</div>
-        <div class="shop_header_info">
-          <span>총 <strong>103</strong>개의 상품이 있습니다.</span>
-          <select class="shop_sort_selector">
-            <option>인기순</option>
-            <option>신상품순</option>
-            <option>판매량순</option>
-            <option>낮은가격</option>
-            <option>높은가격</option>
-          </select>
-        </div>
-      </div>
+        <section class="shop_containor">
+            <div class="shop_header_wrap">
+                <div class="shop_header">ALL</div>
+                <div class="shop_header_info">
+                    <span>총 <strong>103</strong>개의 상품이 있습니다.</span>
+                    <select class="shop_sort_selector">
+                        <option>인기순</option>
+                        <option>신상품순</option>
+                        <option>판매량순</option>
+                        <option>낮은가격</option>
+                        <option>높은가격</option>
+                    </select>
+                </div>
+            </div>
 
-      <div class="shop_item_wrap" id="shop_item_wrap"></div>
+            <div class="shop_item_wrap" id="shop_item_wrap"></div>
 
-      <div class="shop_pagehandler">
-        <button class="shop_page_moreload">더보기</button>
-        <ul>
-          <li><span>1</span></li>
-          <li><span>2</span></li>
-          <li><span>3</span></li>
-          <li><span>4</span></li>
-          <li><span>5</span></li>
-          <li><span>6</span></li>
-          <li><span>7</span></li>
-          <li><span>8</span></li>
-          <li class="shop_page_selected"><span>9</span></li>
-        </ul>
-      </div>
-    </section>
-  </body>
+            <div class="shop_pagehandler">
+                <button class="shop_page_moreload">더보기</button>
+                <ul>
+                    <li><span>1</span></li>
+                    <li><span>2</span></li>
+                    <li><span>3</span></li>
+                    <li><span>4</span></li>
+                    <li><span>5</span></li>
+                    <li><span>6</span></li>
+                    <li><span>7</span></li>
+                    <li><span>8</span></li>
+                    <li class="shop_page_selected"><span>9</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 공통 footer -->
+        <div id="footer"></div>
+    </body>
 </html>
