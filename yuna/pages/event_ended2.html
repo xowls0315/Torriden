@@ -1,89 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Torriden</title>
-        <link
-            href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="../../reset.css" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="../../taejin/css/header.css" />
-        <link rel="stylesheet" href="../../taejin/css/footer.css" />
-        <link rel="stylesheet" href="../css/event_ended2.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Torriden</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../reset.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../taejin/css/header.css" />
+    <link rel="stylesheet" href="../../taejin/css/footer.css" />
+    <link rel="stylesheet" href="../css/event_ended2.css" />
 
-        <script type="module" src="../../include.js" defer></script>
-        <script src="../javascript/event_ended2.js" defer></script>
-    </head>
-    <body>
-        <!-- 공통 header -->
-        <div id="header"></div>
+    <script type="module" src="../../include.js" defer></script>
+    <script src="../javascript/event_ended2.js" defer></script>
+  </head>
+  <body>
+    <!-- 공통 header -->
+    <div id="header"></div>
 
-        <div class="event">
-            <h2 class="event__title">EVENT</h2>
+    <div class="event">
+      <h2 class="event__title">EVENT</h2>
 
-            <!-- 이벤트 종류 버튼 -->
-            <div class="event__buttons">
-                <button class="event__button event__buttons-active">
-                    진행중 이벤트
-                </button>
-                <button class="event__button event__buttons-ended">
-                    종료된 이벤트
-                </button>
-            </div>
+      <!-- 이벤트 종류 버튼 -->
+      <div class="event__buttons">
+        <a
+          href="../../yuna/pages/event_active.html"
+          class="event__button event__buttons-active"
+        >
+          진행중 이벤트
+        </a>
+        <a
+          href="../../yuna/pages/event_ended.html"
+          class="event__button event__buttons-ended"
+        >
+          종료된 이벤트
+        </a>
+      </div>
 
-            <!-- CONTENTS 내용 -->
-            <section class="event__section">
-                <!-- java script -->
-            </section>
+      <!-- CONTENTS 내용 -->
+      <section class="event__section">
+        <!-- java script -->
+      </section>
 
-            <!-- 페이지 이동 버튼 (Web) -->
-            <div class="event__pageButtons">
-                <a
-                    href="../../yuna/pages/event_ended.html"
-                    class="event__pageButton event__pageButton-first"
-                    >1</a
-                >
-                <a
-                    href="../../yuna/pages/event_ended2.html"
-                    class="event__pageButton event__pageButton-second"
-                    >2</a
-                >
-                <a
-                    href="../../yuna/pages/event_ended3.html"
-                    class="event__pageButton event__pageButton-third"
-                    >3</a
-                >
-            </div>
+      <!-- 페이지 이동 버튼 (Web) -->
+      <div class="event__pageButtons">
+        <a
+          href="../../yuna/pages/event_ended.html"
+          class="event__pageButton event__pageButton-first"
+          >1</a
+        >
+        <a
+          href="../../yuna/pages/event_ended2.html"
+          class="event__pageButton event__pageButton-second"
+          >2</a
+        >
+        <a
+          href="../../yuna/pages/event_ended3.html"
+          class="event__pageButton event__pageButton-third"
+          >3</a
+        >
+      </div>
 
-            <!-- 페이지 이동 버튼 (mobile) -->
-            <div class="event_mobileButton">
-                <a
-                    href="../../yuna/pages/event_ended.html"
-                    class="event_mobileButton-left"
-                >
-                    <i class="ri-arrow-left-s-line"></i>
-                </a>
-                <div class="event_mobileButton-number">
-                    <span class="event_mobileButton-first">2</span>
-                    <span class="event_mobileButton-second">/</span>
-                    <span class="event_mobileButton-third">3</span>
-                </div>
-                <a
-                    href="../../yuna/pages/event_ended3.html"
-                    class="event_mobileButton-left"
-                >
-                    <i class="ri-arrow-right-s-line"></i>
-                </a>
-            </div>
+      <!-- 페이지 이동 버튼 (mobile) -->
+      <div class="event_mobileButton">
+        <a
+          href="../../yuna/pages/event_ended.html"
+          class="event_mobileButton-left"
+        >
+          <i class="ri-arrow-left-s-line"></i>
+        </a>
+        <div class="event_mobileButton-number">
+          <span class="event_mobileButton-first">2</span>
+          <span class="event_mobileButton-second">/</span>
+          <span class="event_mobileButton-third">3</span>
         </div>
+        <a
+          href="../../yuna/pages/event_ended3.html"
+          class="event_mobileButton-left"
+        >
+          <i class="ri-arrow-right-s-line"></i>
+        </a>
+      </div>
+    </div>
 
-        <!-- 공통 footer -->
-        <div id="footer"></div>
-    </body>
+    <!-- 공통 footer -->
+    <div id="footer"></div>
+  </body>
 </html>

@@ -10,11 +10,11 @@
     />
     <link rel="stylesheet" href="../../reset.css" />
     <link
-            href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="../../taejin/css/header.css" />
-        <link rel="stylesheet" href="../../taejin/css/footer.css" />
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../taejin/css/header.css" />
+    <link rel="stylesheet" href="../../taejin/css/footer.css" />
     <link rel="stylesheet" href="../css/event_ended3.css" />
 
     <script type="module" src="../../include.js" defer></script>
@@ -22,19 +22,25 @@
   </head>
   <body>
     <!-- 공통 header -->
-        <div id="header"></div>
+    <div id="header"></div>
 
     <div class="event">
       <h2 class="event__title">EVENT</h2>
 
       <!-- 이벤트 종류 버튼 -->
       <div class="event__buttons">
-        <button class="event__button event__buttons-active">
+        <a
+          href="../../yuna/pages/event_active.html"
+          class="event__button event__buttons-active"
+        >
           진행중 이벤트
-        </button>
-        <button class="event__button event__buttons-ended">
+        </a>
+        <a
+          href="../../yuna/pages/event_ended.html"
+          class="event__button event__buttons-ended"
+        >
           종료된 이벤트
-        </button>
+        </a>
       </div>
 
       <!-- CONTENTS 내용 -->
@@ -84,6 +90,6 @@
     </div>
 
     <!-- 공통 footer -->
-        <div id="footer"></div>
+    <div id="footer"></div>
   </body>
 </html>
