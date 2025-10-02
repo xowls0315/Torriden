@@ -36,9 +36,9 @@ main {
 }
 .mainpage_contents1 {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - var(--header-height));
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 10px;
 }
@@ -399,4 +399,211 @@ main {
 
 .mainpage_contents3_btns button.is-active {
     border-bottom-width: 2px;
+}
+
+/* ===========================
+   Mobile (max-width: 768px)
+   =========================== */
+@media screen and (max-width: 768px) {
+    /* 전체 레이아웃 여백/넓이 조정 */
+    main {
+        max-width: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    /* 모션 기본 이동거리 축소(모바일에서 과한 점프 방지) */
+    [data-motion] > * {
+        transform: translateY(20px);
+    }
+    [data-motion='fade-up'] > * {
+        transform: translateY(20px);
+    }
+    [data-motion='fade-left'] > * {
+        transform: translateX(20px);
+    }
+    [data-motion='fade-right'] > * {
+        transform: translateX(-20px);
+    }
+    [data-motion='fade-down'] > * {
+        transform: translateY(-20px);
+    }
+
+    /* ===== 섹션1: 카드 그리드(포스터 콜라주) ===== */
+    .mainpage_contents1 {
+        height: auto; /* 고정 100vh 제거 */
+        grid-template-columns: 1fr; /* 1열 */
+        grid-template-rows: none;
+        grid-auto-rows: minmax(180px, 36vh); /* 카드 적당한 높이 */
+        gap: 8px;
+    }
+    /* 데스크톱에서 강제한 grid-area 초기화 */
+    .mainpage_contents1-1,
+    .mainpage_contents1-2,
+    .mainpage_contents1-3,
+    .mainpage_contents1-4,
+    .mainpage_contents1-5 {
+        grid-area: auto / auto / auto / auto !important;
+    }
+    .mainpage_contents1 > article {
+        padding: 24px 16px;
+    }
+    .mainpage_contents1 > article > h6 {
+        font-size: 16px;
+    }
+    .mainpage_contents1 > article > span {
+        font-size: 12px;
+    }
+    .mainpage_contents1 > article::before {
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+
+    /* ===== 섹션2: 히어로 스와이퍼 ===== */
+    .mainpage_contents2 {
+        width: 100vw;
+        height: 50vh; /* 모바일에서 조금 낮게 */
+        margin-top: 100px;
+        margin: 0 auto;
+    }
+    .mainpage_contents2 .swiper {
+        width: 90%;
+        height: 100%;
+    }
+    .mainpage_contents2 .swiper-slide {
+        width: 100%;
+        height: 100%;
+        background-position: 50% 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* 필요에 따라 조정 */
+        align-items: center;
+        text-align: center;
+        color: #111;
+    }
+    .mainpage_contents2 .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .mainpage_contents2-1_text,
+    .mainpage_contents2-2_text,
+    .mainpage_contents2-3_text,
+    .mainpage_contents2-4_text,
+    .mainpage_contents2-5_text,
+    .mainpage_contents2-6_text {
+        width: 92%;
+    }
+    .mainpage_contents2-1_text > h3,
+    .mainpage_contents2-2_text > h3,
+    .mainpage_contents2-3_text > h3,
+    .mainpage_contents2-4_text > h3,
+    .mainpage_contents2-5_text > h3,
+    .mainpage_contents2-6_text > h3 {
+        font-size: 22px;
+        line-height: 1.25;
+    }
+    .mainpage_contents2-1_text > span,
+    .mainpage_contents2-2_text > span,
+    .mainpage_contents2-3_text > span,
+    .mainpage_contents2-4_text > span,
+    .mainpage_contents2-5_text > span,
+    .mainpage_contents2-6_text > span {
+        margin-top: 14px;
+        font-size: 13px;
+    }
+
+    /* 히어로 네비/페이지네이션 크기 및 위치 */
+    .mainpage_contents2 .swiper-button-prev,
+    .mainpage_contents2 .swiper-button-next {
+        --swiper-navigation-size: 24px; /* 기본 아이콘 크기 축소 */
+        padding: 0 8px;
+    }
+    .mainpage_contents2 .swiper-pagination {
+        width: 60%; /* 진행바 넓이 확대 */
+        bottom: 16px; /* 조금 올림 */
+    }
+
+    /* ===== 섹션3: 추천 상품 스와이퍼 ===== */
+    .mainpage_contents3 {
+        height: auto;
+        padding: 60px 0 80px;
+        gap: 24px;
+    }
+    .mainpage_contents3 > h3 {
+        font-size: 24px;
+    }
+
+    .mainpage_contents3_btns {
+        gap: 12px;
+    }
+    .mainpage_contents3_btns > button {
+        font-size: 15px;
+        padding: 8px 6px; /* 터치 타깃 확보 */
+        border-bottom-width: 1px;
+    }
+    .mainpage_contents3_btns button.is-active {
+        border-bottom-width: 2px;
+    }
+
+    /* 컨테이너 패딩 및 너비 */
+    .products-swiper-area {
+        width: 75%;
+        padding: 0 8px;
+        margin: 0 auto 40px;
+    }
+
+    /* 좌우 버튼을 화면 안쪽으로 */
+    .products-prev {
+        left: 6px;
+    }
+    .products-next {
+        right: 6px;
+    }
+    .products-prev i,
+    .products-next i {
+        font-size: 24px;
+    }
+
+    /* 카드 컴팩트 간격/타이포 */
+    .products-swiper .swiper-slide {
+        gap: 10px;
+    }
+    .product-thumb img {
+        width: 100%;
+        aspect-ratio: 4 / 5; /* 이미지 비율 고정으로 점프 방지 */
+        object-fit: cover;
+    }
+    .mainpage_contents3_bests-like-btn {
+        width: 32px;
+        height: 32px;
+        right: 8px;
+        bottom: 8px;
+    }
+    .mainpage_contents3_bests-like-btn i {
+        font-size: 18px;
+    }
+
+    .products-swiper .swiper-slide > span {
+        font-size: 13px;
+        line-height: 1.35;
+    }
+    .product-price {
+        margin-top: 8px;
+    }
+    .product-price > p {
+        gap: 8px;
+        font-size: 13px;
+    }
+    .product-price > i {
+        font-size: 16px;
+    }
+
+    /* 하단 프로그레스바 위치/길이 조정 */
+    .products-swiper-area > .products-pagination {
+        width: 50%;
+        bottom: -30px;
+    }
 }
