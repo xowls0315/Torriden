@@ -1,6 +1,6 @@
 const event__section = document.querySelector(".event__section");
 
-const data = [
+const event_ended_data3 = [
   {
     src: "../img/event_end3/event_end3_1.jpg",
     span: `Happy Torriden month <br>UP TO 27% SALE...`,
@@ -42,7 +42,7 @@ const data = [
     span: `설맞이 기프트 기획전 <br> UP TO 40% SALE`,
   },
 ];
-data.forEach((v) => {
+event_ended_data3.forEach((v) => {
   // 1. article
   const article = document.createElement("article");
   article.classList.add("event__section-contents");

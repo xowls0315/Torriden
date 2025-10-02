@@ -1,6 +1,6 @@
 const event__section = document.querySelector(".event__section");
 
-const data = [
+const event_ended_data1 = [
   {
     src: "../img/event_end/event_end_1.jpg",
     span: `9월 신규회원 특가`,
@@ -42,7 +42,7 @@ const data = [
     span: `NEW⭐흔적 밀착 토닝 케어! 셀메이징 비타 흔적 패드...`,
   },
 ];
-data.forEach((v) => {
+event_ended_data1.forEach((v) => {
   // 1. article
   const article = document.createElement("article");
   article.classList.add("event__section-contents");

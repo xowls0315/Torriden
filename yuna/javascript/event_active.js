@@ -1,6 +1,6 @@
 const event__section = document.querySelector(".event__section");
 
-const data = [
+const event_active_data = [
   {
     src: "../img/event_active/event_active_1.jpg",
     span: `한가위 추석 선물 기획전🎁<br>UP TO 51%`,
@@ -18,7 +18,7 @@ const data = [
     span: `토리든<br>신규회원 혜택`,
   },
 ];
-data.forEach((v) => {
+event_active_data.forEach((v) => {
   // 1. article
   const article = document.createElement("article");
   article.classList.add("event__section-contents");

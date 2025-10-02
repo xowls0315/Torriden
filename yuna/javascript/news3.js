@@ -1,6 +1,6 @@
 const news__table_tbody = document.querySelector(".news__table_tbody");
 
-const data = [
+const news_data3 = [
   {
     num: 7,
     title: "토리든 공식 홈페이지 리뉴얼 안내",
@@ -52,7 +52,7 @@ const data = [
   },
 ];
 
-data.forEach((v) => {
+news_data3.forEach((v) => {
   // 1. tr
   const tr = document.createElement("tr");
   tr.classList.add("news__table_row");
@@ -96,7 +96,7 @@ data.forEach((v) => {
 /*모바일 버전*/
 const news__mobile_section = document.querySelector(".news__mobile_section");
 
-data.forEach((v) => {
+news_data3.forEach((v) => {
   // 1. article
   const article = document.createElement("article");
   article.classList.add("news__mobile_contens");

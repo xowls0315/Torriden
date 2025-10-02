@@ -1,6 +1,6 @@
 const event__section = document.querySelector(".event__section");
 
-const data = [
+const event_ended_data2 = [
   {
     src: "../img/event_end2/event_end2_1.jpg",
     span: `2025 상반기 결산! 전품목 할인`,
@@ -42,7 +42,7 @@ const data = [
     span: `토리든 커넥트 성수 AMAZING CANDY BAR! ...`,
   },
 ];
-data.forEach((v) => {
+event_ended_data2.forEach((v) => {
   // 1. article
   const article = document.createElement("article");
   article.classList.add("event__section-contents");
@@ -63,17 +63,4 @@ data.forEach((v) => {
 
   // 5. 최종 삽입
   event__section.appendChild(article);
-});
-
-// 버튼 클릭시 페이지 이동
-
-//이벤트 진행 관련
-const event__buttons_active = document.querySelector(".event__buttons-active");
-const event__buttons_ended = document.querySelector(".event__buttons-ended");
-
-event__buttons_active.addEventListener("click", () => {
-  location.href = "http://127.0.0.1:5500/yuna/pages/event_active.html";
-});
-event__buttons_ended.addEventListener("click", () => {
-  location.href = "http://127.0.0.1:5500/yuna/pages/event_ended.html";
 });

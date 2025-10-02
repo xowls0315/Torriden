@@ -1,4 +1,4 @@
-const data = [
+const news_data1 = [
   {
     num: 27,
     title: "10월 추석연휴 CS & 배송 휴무 공지",
@@ -73,7 +73,7 @@ const data = [
 /*웹버전*/
 const news__table_tbody = document.querySelector(".news__table_tbody");
 
-data.forEach((v) => {
+news_data1.forEach((v) => {
   // 1. tr
   const tr = document.createElement("tr");
   tr.classList.add("news__table_row");
@@ -117,7 +117,7 @@ data.forEach((v) => {
 /*모바일 버전*/
 const news__mobile_section = document.querySelector(".news__mobile_section");
 
-data.forEach((v) => {
+news_data1.forEach((v) => {
   // 1. article
   const article = document.createElement("article");
   article.classList.add("news__mobile_contens");

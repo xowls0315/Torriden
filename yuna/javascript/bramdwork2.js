@@ -1,6 +1,6 @@
 const brandwork__section = document.querySelector(".brandwork__section");
 
-const data = [
+const brandwork_data2 = [
   {
     src: "../img/brandwork2/brandwork_11.png",
     span: `토리든X뚝딱씨 콜라보 `,
@@ -28,7 +28,7 @@ const data = [
   },
 ];
 
-data.forEach((v) => {
+brandwork_data2.forEach((v) => {
   // 1. article
   const article = document.createElement("article");
   article.classList.add("brandwork__contents");

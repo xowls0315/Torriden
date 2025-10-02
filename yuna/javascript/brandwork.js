@@ -1,6 +1,6 @@
 const brandwork__section = document.querySelector(".brandwork__section");
 
-const data = [
+const brandwork_data1 = [
   {
     src: "../img/brandwork/brandwork_first.png",
     span: `Commentary Ep 05. NEW CELLMAZING <br />Brightening Spot Toning Pad`,
@@ -53,7 +53,7 @@ const data = [
   },
 ];
 
-data.forEach((v) => {
+brandwork_data1.forEach((v) => {
   // 1. article
   const article = document.createElement("article");
   article.classList.add("brandwork__contents");
